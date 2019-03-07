@@ -164,28 +164,30 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 
 #### Dual state notation
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get-on** | value for ON status to get or an array of states (default 'true|1|on|open|ON') |
-| **data-get-off** | value for OFF status to get. (default 'false|0|off|closed|OFF') |
-| **data-set-on** | value for ON status to set. (default: value of data-get-on) |
-| **data-set-off** | value for OFF status to set. (default: value of data-get-off) |
-| **data-icon** | name of the font-awesome icon. (default: fa-lightbulb-o) |
-| **data-background-icon** | name of the font-awesome icon for background (default 'fa-circle') |
-| **data-on-background-color** | color for ON state or DEVICE:READING for dynamic setting (default '#aa6900') |
-| **data-off-background-color** | color for OFF state or DEVICE:READING for dynamic setting (default '#505050') |
-| **data-on-color** | color for ON state or DEVICE:READING for dynamic setting (default '#aa6900') |
-| **data-off-color** | color for Off state or DEVICE:READING for dynamic setting (default '#505050') |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get-on** | value for ON status to get or an array of states | true\|1\|on\|open\|ON |
+| **data-get-off** | value for OFF status to get. | false\|0\|off\|closed\|OFF |
+| **data-set-on** | value for ON status to set. (default: ) | value of data-get-on |
+| **data-set-off** | value for OFF status to set. (default: ) | value of data-get-off |
+| **data-icon** | name of the font-awesome icon. (default: ) | fa-lightbulb-o |
+| **data-background-icon** | name of the font-awesome icon for background | fa-circle |
+| **data-on-background-color** | color for ON state or DEVICE:READING for dynamic setting | #aa6900 |
+| **data-off-background-color** | color for OFF state or DEVICE:READING for dynamic setting | #505050 |
+| **data-on-color** | color for ON state or DEVICE:READING for dynamic setting | #aa6900 |
+| **data-off-color** | color for Off state or DEVICE:READING for dynamic setting | #505050 |
 
 #### Multi state notation
 
-| **data-states** | array of states | 
-| **data-set-states** | array of states to set. |
-| **data-icons** | array of icons related to the data-states array | 
-| **data-background-icons** | array of background icons related to the data-states array |
-| **data-colors** | array of colors related to the data-states array |
-| **data-background-colors** | array of background colors related to the data-states array |
-| **class** | readonly, compressed, invert |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-states** | array of states | | 
+| **data-set-states** | array of states to set. | |
+| **data-icons** | array of icons related to the data-states array | | 
+| **data-background-icons** | array of background icons related to the data-states array | |
+| **data-colors** | array of colors related to the data-states array | |
+| **data-background-colors** | array of background colors related to the data-states array | |
+| **class** | readonly, compressed, invert | |
 
 **data-get-on** and **data-get-off** accept also RegEx values. e.g. ```data-get-on="[0-9]{1,3}|on"``` means set switch on if STATE is a numeric value or 'on'.
 
@@ -201,43 +203,43 @@ See [examples](#switch) of Switch
 
 ### Symbol widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading to get from FHEM (default 'STATE') |
-| **data-warn** | name of the reading to be shown as a red warn overlay (default <null>) |
-| **data-warn-on** | value(s) that show the warn badge (default 'true|on|[1-9]{1}[0-9]*') |
-| **data-warn-off** | value(s) that hide the warn badge (default 'false|off|0') |
-| **data-warn-color** | forecolor for warn badge (default '#aaa') |
-| **data-warn-background-color** | background color for warn badge (default '#aa2200') |
-| **data-hide** | name of the reading to hide/show the widget (default 'STATE') |
-| **data-hide-on** | value for HIDE (default 'true|1|on') |
-| **data-hide-off** | value for SHOW (default '!on') |
-| **data-hideparents** | jquery selector to hide element's parents too |
-| **data-lock** | name of the reading containing a boolean value for the lock (readonly) parameter (default <null>) |
-| **data-reachable** | name of the reading containing a integer value to indicate whether the device is reachable or not (default <null>) |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading to get from FHEM (default 'STATE') | |
+| **data-warn** | name of the reading to be shown as a red warn overlay (default <null>) | |
+| **data-warn-on** | value(s) that show the warn badge (default 'true|on|[1-9]{1}[0-9]*') | |
+| **data-warn-off** | value(s) that hide the warn badge (default 'false|off|0') | |
+| **data-warn-color** | forecolor for warn badge (default '#aaa') | |
+| **data-warn-background-color** | background color for warn badge (default '#aa2200') | |
+| **data-hide** | name of the reading to hide/show the widget (default 'STATE') | |
+| **data-hide-on** | value for HIDE (default 'true|1|on') | |
+| **data-hide-off** | value for SHOW (default '!on') | |
+| **data-hideparents** | jquery selector to hide element's parents too | |
+| **data-lock** | name of the reading containing a boolean value for the lock (readonly) parameter (default <null>) | |
+| **data-reachable** | name of the reading containing a integer value to indicate whether the device is reachable or not (default <null>) | |
 
 #### Dual State Notation
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get-on** | value for ON status to get or an array of states (default 'true|1|on|open|ON') |
-| **data-get-off** | value for OFF status to get. (default 'false|0|off|closed|OFF') |
-| **data-icon** | name of the font-awesome icon. (default 'ftui-window') |
-| **data-background-icon** | name of the font-awesome icon for background (default '') |
-| **data-on-background-color** | fix color attribute for ON state or DEVICE:READING for dynamic setting (default '#aa6900') |
-| **data-off-background-color** | fix color attribute for OFF state or DEVICE:READING for dynamic setting (default '#505050') |
-| **data-on-color** | fix color attribute for ON state or DEVICE:READING for dynamic setting (default '#aa6900') |
-| **data-off-color** | fix color attribute for Off state or DEVICE:READING for dynamic setting (default '#505050') |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get-on** | value for ON status to get or an array of states | true\|1\|on\|open\|ON |
+| **data-get-off** | value for OFF status to get. | false\|0\|off\|closed\|OFF |
+| **data-icon** | name of the font-awesome icon. | ftui-window |
+| **data-background-icon** | name of the font-awesome icon for background | |
+| **data-on-background-color** | fix color attribute for ON state or DEVICE:READING for dynamic setting | #aa6900 |
+| **data-off-background-color** | fix color attribute for OFF state or DEVICE:READING for dynamic setting | #505050 |
+| **data-on-color** | fix color attribute for ON state or DEVICE:READING for dynamic setting | #aa6900 |
+| **data-off-color** | fix color attribute for Off state or DEVICE:READING for dynamic setting | #505050 |
 
 #### Multi State Notation 
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-states** | array of states | 
-| **data-icons** | array of icons related to the data-states array | 
-| **data-background-icons** | array of icons related to the data-states array |
-| **data-colors** | array of colors related to the data-states array |
-| **data-background-colors** | array of colors related to the data-states array |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-states** | array of states | | 
+| **data-icons** | array of icons related to the data-states array | | 
+| **data-background-icons** | array of icons related to the data-states array | |
+| **data-colors** | array of colors related to the data-states array | |
+| **data-background-colors** | array of colors related to the data-states array | |
 
 | **class** | compressed
 
@@ -252,28 +254,28 @@ See [examples](#symbol) of Symbol
 
 ### Label widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading containing label text |
-| **data-part** | RegEx or number (which word) for filtering shown text |
-| **data-fix** | keeping a specified number of decimals. (default '-1' -> non-numeric) |
-| **data-factor** | a numbers to be multiplied by the numeric reading value (default '' ) |
-| **data-color** | fix color attribute or DEVICE:READING for dynamic setting of label color (default '') |
-| **data-colors** | a array of color values. The used element for the label color defines the matching element of the limits array |
-| **data-classes** | a array of class names. The used element class defines the matching element of the limits array |
-| **data-limits** | a array of numeric or RegEx values for comparing with the current value |
-| **data-limits-get** | name of the DEVICE:Reading to retrieve the value for comparing with the limits array (default: data-device:data-get) |
-| **data-limits-part** | filter for the value. part number of the space separated value or an RegEx (default '-1' -> all) |
-| **data-unit** | add a unit after a numeric value. |
-| **data-substitution** | multiple functions to replace the original value (see descriptions below) |
-| **data-pre-text** | include this text before reading text |
-| **data-post-text** | include this text after reading text |
-| **data-hide** | name of the reading to hide/show the widget (default 'STATE') |
-| **data-hide-on** | value for HIDE (default 'true|1|on') |
-| **data-hide-off** | value for SHOW (default '!on') |
-| **data-hideparents** | jquery selector to hide element's parents too |
-| **data-refresh** | auto refresh interval in secondes (default '0', 0 means no auto refresh) |
-| **class** | small, large, big, bigger, thin, red, green, blue, orange, darker, timestamp, w1x, w2x, w3x, circleborder, squareborder, bg-limit, icon, square, round, truncate |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading containing label text | |
+| **data-part** | RegEx or number (which word) for filtering shown text | |
+| **data-fix** | keeping a specified number of decimals. | -1 (non-numeric) |
+| **data-factor** | a numbers to be multiplied by the numeric reading value | |
+| **data-color** | fix color attribute or DEVICE:READING for dynamic setting of label color | |
+| **data-colors** | a array of color values. The used element for the label color defines the matching element of the limits array | |
+| **data-classes** | a array of class names. The used element class defines the matching element of the limits array | |
+| **data-limits** | a array of numeric or RegEx values for comparing with the current value | |
+| **data-limits-get** | name of the DEVICE:Reading to retrieve the value for comparing with the limits array | data-device:data-get |
+| **data-limits-part** | filter for the value. part number of the space separated value or an RegEx | -1 (all) |
+| **data-unit** | add a unit after a numeric value. | |
+| **data-substitution** | multiple functions to replace the original value (see descriptions below) | |
+| **data-pre-text** | include this text before reading text | |
+| **data-post-text** | include this text after reading text | |
+| **data-hide** | name of the reading to hide/show the widget | STATE |
+| **data-hide-on** | value for HIDE  | true\|1\|on |
+| **data-hide-off** | value for SHOW | !on |
+| **data-hideparents** | jquery selector to hide element's parents too | |
+| **data-refresh** | auto refresh interval in secondes | 0 (no auto refresh) |
+| **class** | small, large, big, bigger, thin, red, green, blue, orange, darker, timestamp, w1x, w2x, w3x, circleborder, squareborder, bg-limit, icon, square, round, truncate | |
 
 Use data-color OR data-colors + data-limits, not both.
 
@@ -337,79 +339,79 @@ See [examples](#label) of Label
 
 ### Select widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading that get the selected item of the list |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
-| **data-list** | name of the reading to get a :-separated list from FHEM |
-| **data-items** | a array of fix items to show in the selection box and send to FHEM (alternative if data-list is empty) |
-| **data-alias** | a array of fix names or a reading name which delivers such an array to show only in the selection box as an alias to the real items |
-| **data-cmd** | name of the command to send to FHEM (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-quote** | characters to enclose the send value. (default '') |
-| **data-delimiter** | character which delimites list item. (default ':') |
-| **data-part** | RegEx or number (which word) for filtering the get reading |
-| **data-size** | number of visible options in the drop-down list. (default '1') |
-| **class** | wider, w1x, w2x, w3x, large, big, notransmit |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading that get the selected item of the list | |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-list** | name of the reading to get a :-separated list from FHEM | |
+| **data-items** | a array of fix items to show in the selection box and send to FHEM (alternative if data-list is empty) | |
+| **data-alias** | a array of fix names or a reading name which delivers such an array to show only in the selection box as an alias to the real items | |
+| **data-cmd** | name of the command to send to FHEM (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) | set |
+| **data-quote** | characters to enclose the send value | |
+| **data-delimiter** | character which delimites list item | : |
+| **data-part** | RegEx or number (which word) for filtering the get reading | |
+| **data-size** | number of visible options in the drop-down list | 1 |
+| **class** | wider, w1x, w2x, w3x, large, big, notransmit | |
 
 ### Input widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading that get the selected item of the list |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
-| **data-cmd** | name of the command to send to FHEM (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-value** | default value |
-| **class** | wider, w1x, w2x, w3x, large, big, notransmit, autoclear, autoselect |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading that get the selected item of the list | |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-cmd** | name of the command to send to FHEM (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) | set |
+| **data-value** | default value | |
+| **class** | wider, w1x, w2x, w3x, large, big, notransmit, autoclear, autoselect | |
 
 data-device, data-get can be references (jQuery seletor) to select-widgets to change the source dynamically
 
 ### Push widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
-| **data-set-on** | value (or an array of values) to send after the the button get released (or when pressed, if data-on-off is set) (default 'on') |
-| **data-set-off** | value to send after the the button get released. (default '') | 
-| **data-background-icon** | name of the font-awesome icon for background (default 'fa-circle') |
-| **data-cmd** | name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-doubleclick** | timeout to wait for a second click or touch. '0' disables the doubleclick feature. (default '0') |
-| **data-countdown** | secondes for the countdown progress control (default: autodetect from 'on-for-timer' command) |
-| **data-icon** | name of the font-awesome icon. (default 'ftui-window') |
-| **data-background-icon** | name of the font-awesome icon for background (default '') |
-| **data-off-background-color** | fix color attribute for OFF state or DEVICE:READING for dynamic setting (default '#505050') |
-| **data-off-color** | fix color attribute for Off state or DEVICE:READING for dynamic setting (default '#505050') |
-| **data-warn** | name of the reading containing a integer value to be shown as a red warn overlay (default <null>) |
-| **data-hide** | string to compare with current value. hide element when it's value equals data-hide. Or a DEVICE:READING to determine hiding from reading value | 
-| **data-hideparents** | jquery selector to hide element's parents too |
-| **data-lock** | name of the reading containing a boolean value for the lock (readonly) parameter (default <null>) |
-| **data-reachable** | name of the reading containing a integer value to indicate whether the device is reachable or not (default <null>) |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-set-on** | value (or an array of values) to send after the the button get released (or when pressed, if data-on-off is set) | on |
+| **data-set-off** | value to send after the the button get released | | 
+| **data-background-icon** | name of the font-awesome icon for background | fa-circle |
+| **data-cmd** | name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) | set |
+| **data-doubleclick** | timeout to wait for a second click or touch. '0' disables the doubleclick feature | 0 |
+| **data-countdown** | secondes for the countdown progress control | autodetected from 'on-for-timer' command |
+| **data-icon** | name of the font-awesome icon | ftui-window |
+| **data-background-icon** | name of the font-awesome icon for background | |
+| **data-off-background-color** | fix color attribute for OFF state or DEVICE:READING for dynamic setting | #505050 |
+| **data-off-color** | fix color attribute for Off state or DEVICE:READING for dynamic setting | #505050 |
+| **data-warn** | name of the reading containing a integer value to be shown as a red warn overlay | <null> |
+| **data-hide** | string to compare with current value. hide element when it's value equals data-hide. Or a DEVICE:READING to determine hiding from reading value | | 
+| **data-hideparents** | jquery selector to hide element's parents too | |
+| **data-lock** | name of the reading containing a boolean value for the lock (readonly) parameter | <null> |
+| **data-reachable** | name of the reading containing a integer value to indicate whether the device is reachable or not | <null> |
 
 'data-set-on' can also be an array of values to toggle between this values
 
 ### Knob widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading containing the status value (default 'STATE') |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
-| **data-cmd** | name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value (default '-1': all of the input) |
-| **data-set-value** | Format of the value to send to FHEM (default '$v': the value only) |
-| **data-min** | minimal value to set (default 0) |
-| **data-max** | maximal value to set (default 70) |
-| **data-initvalue** | (default 10) |
-| **data-step** | (default 1); |
-| **data-angleoffset** | (default -120); |
-| **data-anglearc** | (default 240); |
-| **data-bgcolor** | Color of background (default '#505050'); |
-| **data-fgcolor** | Color of ticks (default '#666'); |
-| **data-nomcolor** | Color of value (default '#ffffff'); |
-| **data-displayNominal** | Show the value (default true); |
-| **data-font** | (default '"Helvetica Neue", "Helvetica", "Open Sans", "Arial", sans-serif'); |
-| **data-font-weight** |
-| **data-unit** | add a unit after the center value. |
-| **data-lock** | name of the reading containing the boolean value for the lock (readonly) parameter (default <null>) |
-| **class** | mini, small, large, readonly |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading containing the status value | STATE |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-cmd** | name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) | set |
+| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value | -1 (all of the input) |
+| **data-set-value** | Format of the value to send to FHEM | $v (value only) |
+| **data-min** | minimal value to set | 0 |
+| **data-max** | maximal value to set | 70 |
+| **data-initvalue** | inital value | 10 |
+| **data-step** | step size | 1 |
+| **data-angleoffset** | | -120 |
+| **data-anglearc** | | 240 |
+| **data-bgcolor** | Color of background | #505050 |
+| **data-fgcolor** | Color of ticks | #666 |
+| **data-nomcolor** | Color of value | #fff |
+| **data-displayNominal** | Show the value | true |
+| **data-font** | | '"Helvetica Neue", "Helvetica", "Open Sans", "Arial", "sans-serif"' |
+| **data-font-weight** | |
+| **data-unit** | add a unit after the center value. | |
+| **data-lock** | name of the reading containing the boolean value for the lock (readonly) parameter | <null> |
+| **class** | mini, small, large, readonly | |
 
 ![](http://knowthelist.github.io/fhem-tablet-ui/knob.png)
 
