@@ -139,7 +139,7 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 | **data-device** | FHEM device name (call FHEM's 'list' command to get all names) |
 | **class** | CSS classes for look and format of the widget |
 
-#### Switch widget
+### Switch widget
 
 | Attribute | Description |
 | --------- | ----------- |
@@ -152,7 +152,7 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 | **data-warn-on** | value(s) that show the warn badge (default 'true|on|[1-9]{1}[0-9]*') |
 | **data-warn-off** | value(s) that hide the warn badge (default 'false|off|0') |
 | **data-warn-color** | forecolor for warn badge (default '#aaa') |
-| **data-warn-background-color**  : background color for warn badge (default '#aa2200') |
+| **data-warn-background-color** | background color for warn badge (default '#aa2200') |
 | **data-warn-icon** | name of the font-awesome icon to be shown instead of the warn text. (default: '') |
 | **data-warn-fixed** | number of digits after the decimal point (default: 0) |
 | **data-hide** | name of the reading to hide/show the widget (default 'STATE') |
@@ -162,12 +162,12 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 | **data-reachable** | name of the reading containing a integer value to indicate whether the device is reachable or not (default <null>) |
 | **data-timeout** | millisecondes until the switch falls back into the initial position (default: 0 [disabled]) |
 
-##### Dual state notation
+#### Dual state notation
 
 | Attribute | Description |
 | --------- | ----------- |
 | **data-get-on** | value for ON status to get or an array of states (default 'true|1|on|open|ON') |
-| **data-get-off**: value for OFF status to get. (default 'false|0|off|closed|OFF') |
+| **data-get-off** | value for OFF status to get. (default 'false|0|off|closed|OFF') |
 | **data-set-on** | value for ON status to set. (default: value of data-get-on) |
 | **data-set-off** | value for OFF status to set. (default: value of data-get-off) |
 | **data-icon** | name of the font-awesome icon. (default: fa-lightbulb-o) |
@@ -177,7 +177,7 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 | **data-on-color** | color for ON state or DEVICE:READING for dynamic setting (default '#aa6900') |
 | **data-off-color** | color for Off state or DEVICE:READING for dynamic setting (default '#505050') |
 
-##### Multi state notation
+#### Multi state notation
 
 | **data-states** | array of states | 
 | **data-set-states** | array of states to set. |
@@ -342,8 +342,8 @@ See [examples](#label) of Label
 | **data-get** | name of the reading that get the selected item of the list |
 | **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
 | **data-list** | name of the reading to get a :-separated list from FHEM |
-| **data-items**: a array of fix items to show in the selection box and send to FHEM (alternative if data-list is empty) |
-| **data-alias**: a array of fix names or a reading name which delivers such an array to show only in the selection box as an alias to the real items |
+| **data-items** | a array of fix items to show in the selection box and send to FHEM (alternative if data-list is empty) |
+| **data-alias** | a array of fix names or a reading name which delivers such an array to show only in the selection box as an alias to the real items |
 | **data-cmd** | name of the command to send to FHEM (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
 | **data-quote** | characters to enclose the send value. (default '') |
 | **data-delimiter** | character which delimites list item. (default ':') |
@@ -358,7 +358,7 @@ See [examples](#label) of Label
 | **data-get** | name of the reading that get the selected item of the list |
 | **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
 | **data-cmd** | name of the command to send to FHEM (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-value**: default value |
+| **data-value** | default value |
 | **class** | wider, w1x, w2x, w3x, large, big, notransmit, autoclear, autoselect |
 
 data-device, data-get can be references (jQuery seletor) to select-widgets to change the source dynamically
@@ -409,7 +409,7 @@ data-device, data-get can be references (jQuery seletor) to select-widgets to ch
 | **data-font-weight** |
 | **data-unit** | add a unit after the center value. |
 | **data-lock** | name of the reading containing the boolean value for the lock (readonly) parameter (default <null>) |
-| **class**: mini, small, large, readonly |
+| **class** | mini, small, large, readonly |
 
 ![](http://knowthelist.github.io/fhem-tablet-ui/knob.png)
 
@@ -463,7 +463,7 @@ all parameters from knob widget plus following additional parameters
 | **data-nomcolor** | Color of value (default '#ffffff'); |
 | **data-tickstep** | distance between ticks (default 4|20) |
 | **data-unit** | add a unit after the desired value. |
-| **class**: mini, small, big, bigger, hue-tick, hue-front, hue-back, dim-tick ,dim-front, dim-back, readonly |
+| **class** | mini, small, big, bigger, hue-tick, hue-front, hue-back, dim-tick ,dim-front, dim-back, readonly |
 
 - class hue-tick: draw ticks in color range
 - class hue-front: draw handle in color range
@@ -482,7 +482,7 @@ all parameters from knob widget plus following additional parameters
 | **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
 | **data-get-on** | array of states using for get (default ['1','2','3','4']) |
 | **data-set-on** | array of states using for set. (default: value of data-get-on) |
-| **data-alias**: array of fix names to show only in the UI as an alias to the real states |
+| **data-alias** | array of fix names to show only in the UI as an alias to the real states |
 | **data-icons** | array of icons related to the data-get-on array |
 | **data-bgcolor** | Color of background (default '#505050'); |
 | **data-fgcolor** | Color of ticks (default '#666'); |
@@ -490,7 +490,7 @@ all parameters from knob widget plus following additional parameters
 | **data-mincolor** | Color of background icons (default '#4477ff'); |
 | **data-maxcolor** | Color of the active icon (default '#ff0000'); |
 | **data-version** | name of the status model e.g. 'residents','roommate','guest' (default NULL) |
-| **class**: small, readonly |
+| **class** | small, readonly |
 
 The default version has 4 states: '1','2','3','4' 
 The default aliases are 'Home','Night','Away','Holiday';
@@ -511,8 +511,8 @@ They have these aliases 'Home','Night','Away','Holiday','Retire'
 | **data-off** | value or RegEx where the slider moves to min (default 'off') |
 | **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value (default '-1': all of the input) |
 | **data-set-value** | Format of the value to send to FHEM (default '$v': the value only) |
-| **data-width**: width for horizontal sliders (default '120px', for mini '60px') |
-| **data-height**: height for vertical sliders (default '120px', for mini '60px') |
+| **data-width** | width for horizontal sliders (default '120px', for mini '60px') |
+| **data-height** | height for vertical sliders (default '120px', for mini '60px') |
 | **data-color** | color for quantity range (default '#aa6900') |
 | **data-background-color** | color for range bar (default '#404040') |
 | **data-handle-diameter** | size for the handle (default 20) |
@@ -544,7 +544,7 @@ class 'value' enables a text element which shows the value
 | --------- | ----------- |
 | **data-get** | name of the reading to get from FHEM (default 'STATE') |
 | **data-max** | maximal value to set or name of the reading which helds the max value (default 100) |
-| **data-progress-width**: width of the circle line in percent (default 15) |
+| **data-progress-width** | width of the circle line in percent (default 15) |
 | **data-unit** | add a unit after the center value. |
 | **class** | novalue, percent |
 
@@ -613,7 +613,7 @@ Use data-url + data-refresh or data-device + data-get, not both.
 | --------- | ----------- |
 | **data-get** | name of the reading to get the weather literal from FHEM (default 'STATE') |
 | **data-imageset** | collection of images to display current weather situation. Possible values: 'meteocons', 'kleinklima', 'meteoconsdirect', 'weathericons' (Default: 'meteocons') |
-| **data-image-path**: path to the images of the selected imageset (default: <fhem-dir>/images/weather/) |
+| **data-image-path** | path to the images of the selected imageset (default: <fhem-dir>/images/weather/) |
 | **data-warn** | name of the reading to be shown as a red warn overlay (default <null>) |
 | **data-warn-on** | value(s) that show the warn badge (default 'true|on|[1-9]{1}[0-9]*') |
 | **data-warn-off** | value(s) that hide the warn badge (default 'false|off|0') |
@@ -647,7 +647,7 @@ Use data-url + data-refresh or data-device + data-get, not both.
 
 | Attribute | Description |
 | --------- | ----------- |
-| **data-url**: URL of the new page to show |
+| **data-url** | URL of the new page to show |
 | **data-icon** | name of the font-awesome icon. (default 'fa-power-off') |
 | **data-background-icon** | name of the font-awesome icon for background (default '') |
 | **data-on-background-color** | color of ON state (default '#aa6900') |
@@ -698,7 +698,7 @@ Examples: https://github.com/knowthelist/fhem-tablet-ui/blob/master/examples/pag
 | **data-tabclass** | CSS class name of the dedicated tab elements (default 'swipertab') |
 | **data-startpage** | number of the first shown page |
 
-Parameter for page elements of the swiper <li>
+Parameter for page elements of the swiper ```<li>```
 
 | Attribute | Description |
 | --------- | ----------- |
@@ -1013,12 +1013,12 @@ data-get JSON-Object:
 | Attribute | Description |
 | --------- | ----------- |
 | **data-get** | name of the reading containing the notification text (default 'STATE') |
-| **data-filter**: RegEx for filtering events to notify |
+| **data-filter** | RegEx for filtering events to notify |
 | **data-part** | RegEx or number (which word) for filtering shown text |
 | **data-fix** | keeping a specified number of decimals. (default '-1' -> non-numeric) |
-| **data-substitution**: multiple functions to replace the original value (see label widget) |
-| **data-pre-text**: include this text before reading text |
-| **data-post-text**: include this text after reading text |
+| **data-substitution** | multiple functions to replace the original value (see label widget) |
+| **data-pre-text** | include this text before reading text |
+| **data-post-text** | include this text after reading text |
 | **data-mode** | kind of notification - notification, toast-error, toast (default 'notification') |
 
 ### Controller widget
@@ -1033,8 +1033,8 @@ data-get JSON-Object:
 | **data-step** | step value (default 1) |
 | **data-on** | value or RegEx where the slider moves to max (default 'on') | 
 | **data-off** | value or RegEx where the slider moves to min (default 'off') |
-| **data-width**: width for controller (default '4em') |
-| **data-height**: height for controller (default '11em') |
+| **data-width** | width for controller (default '4em') |
+| **data-height** | height for controller (default '11em') |
 | **data-color** | color for quantity range (default '#fff') |
 | **data-background-color** | color for range bar (default 'rgba(40,40,40,0.5)') |
 | **data-icon** | name for the fix icon |
@@ -1056,7 +1056,7 @@ data-get JSON-Object:
 | **data-on-background-color** | color for ON state or DEVICE:READING for dynamic setting (default '#aa6900') |
 | **data-off-background-color** | color for OFF state or DEVICE:READING for dynamic setting (default '#505050') |
 | **data-on-color** | color for ON state or DEVICE:READING for dynamic setting (default '#aa6900') |
-| **data-off-color**: color for Off state or DEVICE:READING for dynamic setting (default '#505050') |
+| **data-off-color** | color for Off state or DEVICE:READING for dynamic setting (default '#505050') |
 
 ### Scale widget
 
@@ -1325,7 +1325,7 @@ Following settings can be added into to the HTML header
 
 To disable drag&drop for gridster set this value to 1
 ```html
-<meta name='gridster_disable' content='1'>
+<meta name="gridster_disable" content="1">
 ```
 
 Add or change this meta tag to set the amount of Gridster columns and rows. These values are used for calculation of 
@@ -1355,34 +1355,40 @@ Additional settings for Gridster are:
 
 **Polling settings**
 
-To disable longpoll set this setting to "0". Default is '1' -> longpoll on
+To disable longpoll set this setting to "0". Default is "1" -> longpoll on
+
 ```html
 <meta name="longpoll" content="1">
 ```
 
 To set longpoll type, select "websocket", "ajax". Default is "websocket". Older browser needs "ajax".
-If your browser dont support WebSockets, then the fall back "ajax" will be used.
+If your browser don't support WebSockets, then the fall back "ajax" will be used.
+
 ```html
 <meta name="longpoll_type" content="websocket">
 ```
 
 Define a special event filter. e.g. if you use a dedicated FTUI Room for you FTUi devices, then you select this Room here.
+
 ```html
 <meta name="longpoll_filter" content=".*">
 ```
 
 This setting affects the maximal allowd time range (in seconds) without any incomming longpoll event. 
 After this time the connection is considered as disconnected and a reconnect is tried.
+
 ```html
 <meta name='longpoll_maxage' content='240'>
 ``` 
  
 Interval for shortpolls (full refresh) in secondes.
+
 ```html
 <meta name="shortpoll_interval" content="900">
 ```
 
 Define a filter for shortpoll. Default is NULL (Autofilter from widgets devices + readings)
+
 ```html
 <meta name="shortpoll_filter" content="">
 ```
@@ -1394,58 +1400,58 @@ Interval for shortpolls (full refresh) in secondes if longpoll is disabled (long
 
 To change the folder where FHEM can be reached for polling
 ```html
-<meta name='fhemweb_url' content='/fhem/'>
+<meta name="fhemweb_url" content="/fhem/">
 ```
 
 The name of your FHEMWEB device
+
 ```html
-<meta name='web_device' content='WEB'>
+<meta name="web_device" content="WEB">
 ```
-
-
 
 **General settings**
 
-
 To enable verbose level, set values greater then 0 (1-5)
+
 ```html
 <meta name="debug" content="1">
 ```
 
 Number of Toast messages maximal displayed at the same time. Default is 5. To disable Toast messages set this value to 0
 ```html
-<meta name='toast' content='1'>
+<meta name="toast" content="1">
 ```
 
 Position of the toast: top-left, top-right bottom-left and bottom-right, top-center, bottom-center and mid-center
+
 ```html
-<meta name='toast_position' content='bottom-left'>
+<meta name="toast_position" content="bottom-left">
 ```
 
 To change the folder where FHEM can be reached for sending
+
 ```html
-<meta name='fhemweb_url' content='/fhem/'>
+<meta name="fhemweb_url" content="/fhem/">
 ```
 
 To change the time for jQuery animation. 0 is usfull for slow devices. 
 ```html
-<meta name='fade_time' content='0'>
+<meta name="fade_time" content="0">
 ```
 
 To change the language for time/date functions
 ```html
-<meta name='lang' content='de'>
+<meta name="lang" content="de">
 ```
 
 To enable basic server authorization
 ```html
-<meta name='username' content='myUser'>
-<meta name='password' content='myPass'>
+<meta name="username" content="myUser">
+<meta name="password" content="myPass">
 ```
 
 Caution! Currently FHEM doesn't support authorization and lonpoll=websockt
 Use longpoll=1 (ajax) instead.
-
 
 **Mobil zooming**
 
@@ -1475,42 +1481,43 @@ Two main boxes left and right. The first row of the left box has 3 columns. The 
 
 ```html
 <li data-row="1" data-col="4" data-sizex="5" data-sizey="3">
- <header>EXAMPLE3</header>
- <div class="row top-space">
- <div class="col-1-2">
- <div class="row top-space">
- <div class="col-1-3">
- <div data-type="switch" data-device="Switch1" data-icon="fa-music"></div>
- <div data-type="label" class="">Station1</div>
- </div>
- <div class="col-1-3">
- <div data-type="switch" data-device="Switch2" data-icon="fa-music"></div>
- <div data-type="label" class="">Station2</div>
- </div>
- <div class="col-1-3">
- <div data-type="switch" data-device="Switch3" data-icon="fa-music"></div>
- <div data-type="label" class="">Station3</div>
- </div>
- </div>
- <div class="row top-space">
- <div class="col-1-2">
- <div data-type="symbol" data-device="Switch1" data-icon="fa-battery-4"></div>
- <div data-type="label" class="">Value1</div>
- </div>
- <div class="col-1-2">
- <div data-type="symbol" data-device="Switch1" data-icon="fa-battery-4"></div>
- <div data-type="label" class="">Value2</div>
- </div>
- </div>
- </div>
- <div class="col-1-2">
- <div data-type="volume" data-device='Volume1' class="" ></div>
- </div>
- </div>
+    <header>EXAMPLE3</header>
+    <div class="row top-space">
+        <div class="col-1-2">
+            <div class="row top-space">
+                <div class="col-1-3">
+                    <div data-type="switch" data-device="Switch1" data-icon="fa-music"></div>
+                    <div data-type="label" class="">Station1</div>
+                </div>
+                <div class="col-1-3">
+                    <div data-type="switch" data-device="Switch2" data-icon="fa-music"></div>
+                    <div data-type="label" class="">Station2</div>
+                </div>
+                <div class="col-1-3">
+                    <div data-type="switch" data-device="Switch3" data-icon="fa-music"></div>
+                    <div data-type="label" class="">Station3</div>
+                </div>
+            </div>
+            <div class="row top-space">
+                <div class="col-1-2">
+                    <div data-type="symbol" data-device="Switch1" data-icon="fa-battery-4"></div>
+                    <div data-type="label" class="">Value1</div>
+                </div>
+                <div class="col-1-2">
+                    <div data-type="symbol" data-device="Switch1" data-icon="fa-battery-4"></div>
+                    <div data-type="label" class="">Value2</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-2">
+            <div data-type="volume" data-device="Volume1" class=""></div>
+        </div>
+    </div>
 </li>
 ```
 
-####Thermostat 
+#### Thermostat
+
 Configure as data-device='...' that item which delivers temp and desired-temp as reading.
 
 Default parameters are:
@@ -1519,28 +1526,34 @@ data-get="desired-temp" data-temp="measured-temp" data-set="desired-temp"
 ```
 Therefor for HomaMatic HM-CC-RT-DN this is sufficient.
 ```html
-<div data-type="thermostat" data-device="KH_Clima"></div>
+<div data-type="thermostat"
+    data-device="KH_Clima">
+</div>
 ```
+
 The long format looks like this:
+
 ```html
 <div data-type="thermostat" 
- data-device="KH_Clima" 
- data-get="desired-temp" 
- data-temp="measured-temp">
+    data-device="KH_Clima" 
+    data-get="desired-temp" 
+    data-temp="measured-temp">
 </div>
 ```
 
 Example for MAX!:
+
 ```html
 <div data-type="thermostat" data-device="HZ_Tuer" 
-data-valve="valveposition" 
-data-get="desiredTemperature" 
-data-temp="temperature" 
- data-set="desiredTemperature">
+    data-valve="valveposition" 
+    data-get="desiredTemperature" 
+    data-temp="temperature" 
+    data-set="desiredTemperature">
 </div>
 ```
 Example to realize a thermostat off and boost function. It sends 'off' if the dial is set to min value 
 and 'boost' if the max value get selected. 
+
 ```html
 <div data-type="thermostat" data-device="W_HEIZUNG" 
 data-min="4" data-off="off" 
@@ -1552,600 +1565,667 @@ The wigets will show the valve value only in case of a valid data-valve attribut
 The default for data-valve ist null. That means, a empty data-valve attribute hides the valve label for the widget. 
 ![](http://knowthelist.github.io/fhem-tablet-ui/thermo.png)
 
-###Label
-**Example** for HM-WDS40-TH-I Funk-Temperatur-/Feuchtesensor innen 
+### Label
+
+**Example** for HM-WDS40-TH-I Funk-Temperatur-/Feuchtesensor innen
+
 ```
 STATET: 20.0 H: 61
 ```
+
 ```html
-<div data-type="label" data-device="THSensorWZ" 
- data-part="2" data-unit="&deg;C" class="big"></div>
+<div data-type="label" data-device="THSensorWZ" data-part="2" data-unit="&deg;C" class="big"></div>
 <div>Temperatur</div>
-<div data-type="label" data-device="THSensorWZ" data-part="4" 
- data-unit="%" class="big"></div>
+<div data-type="label" data-device="THSensorWZ" data-part="4" data-unit="%" class="big"></div>
 <div>Luftfeuchte</div>
 ```
+
 But the same result can reached by getting single readings:
+
 ```
 humidity58
 temperature20.1
 ```
+
 ```html
-<div data-type="label" data-device="THSensorWZ" 
- data-get="temperature" data-unit="&deg;C" class="big"></div>
+<div data-type="label" data-device="THSensorWZ" data-get="temperature" data-unit="&deg;C" class="big"></div>
 <div>Temperatur</div>
-<div data-type="label" data-device="THSensorWZ" 
- data-get="humidity" data-unit="%" class="big"></div>
+<div data-type="label" data-device="THSensorWZ" data-get="humidity" data-unit="%" class="big"></div>
 <div>Luftfeuchte</div>
 ```
 
 **Example** for how to influence the color of the label according to value limits
+
 ```html
 <div data-type="label" 
- data-device="OutTemp" 
- data-limits='[-73,10,23]' 
- data-colors='["#6699FF","#AA6900","#FF0000"]' 
- data-unit="&deg;C"
- class="big">
+    data-device="OutTemp" 
+    data-limits='[-73,10,23]' 
+    data-colors='["#6699FF","#AA6900","#FF0000"]' 
+    data-unit="&deg;C"
+    class="big">
 </div>
 ```
 
 Fixed label
+
 ```html
 <div class="fixedlabel" 
- data-type="label" 
- data-device="BadWandlicht" 
- data-states='["on","off"]' 
- data-colors='["orange","gray"]'>Bad</div>
+    data-type="label" 
+    data-device="BadWandlicht" 
+    data-states='["on","off"]' 
+    data-colors='["orange","gray"]'>Bad</div>
 ```
 
 **Example** for how to create a widget for shutter via push: show state and set up/down
+
 ```html
 <div data-type="switch" 
- data-device="wzRollo" 
- data-get-on="up" 
- data-get-off="down" 
- data-icon="fa-bars" >
+    data-device="wzRollo" 
+    data-get-on="up" 
+    data-get-off="down" 
+    data-icon="fa-bars">
 </div>
 ```
 
 **Example** for how to create a label for a time value in short format with usage of RegEx
 ```html
 <div data-type="label" 
- data-device="dummy1" 
- data-part="(\d\d\.\d\d\.).*">
+    data-device="dummy1" 
+    data-part="(\d\d\.\d\d\.).*">
 </div>
 ```
 
 **Example** for how to show two labels in one line.
 ```html
 <div class="">
- <div type="label" device="OnSunrise" class="inline"></div>bis
- <div type="label" device="OnSunset" class="inline"></div>
+    <div type="label" device="OnSunrise" class="inline"></div> bis
+    <div type="label" device="OnSunset" class="inline"></div>
 </div>
 ```
 
-###Push
+### Push
+
 **Example** for how to create a push button widget to trigger all devices on:
+
 ```html
 <div data-type="push" 
- data-device="LightAll" 
- data-cmd="trigger" 
- data-set-on="on">
+    data-device="LightAll" 
+    data-cmd="trigger" 
+    data-set-on="on">
 </div>
 ```
+
 **Example** two square buttons horizontal
+
 ```html
 <div>
- <div class="doublebox-h">
- <div data-type="push" data-device="Rollo" 
- data-icon="fa-angle-up" data-background-icon="fa-square-o" 
- data-set-on="up">
- </div>
- <div data-type="push" data-device="Rollo" 
- data-icon="fa-angle-down" data-background-icon="fa-square-o" 
- data-set-on="down">
- </div>
- </div>
+    <div class="doublebox-h">
+        <div data-type="push" data-device="Rollo" 
+            data-icon="fa-angle-up" data-background-icon="fa-square-o" 
+            data-set-on="up">
+        </div>
+        <div data-type="push" data-device="Rollo" 
+            data-icon="fa-angle-down" data-background-icon="fa-square-o" 
+            data-set-on="down">
+        </div>
+    </div>
 </div>
 ```
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/square-push-h.png)
 
 **Example** two square buttons vertical
+
 ```html
 <div>
- <div class="doublebox-v">
- <div data-type="push" data-device="Rollo" 
- data-icon="fa-chevron-up" data-background-icon="fa-square-o" 
- data-set-on="up">
- </div>
- <div data-type="push" data-device="Rollo" 
- data-icon="fa-chevron-down" data-background-icon="fa-square-o" 
- data-set-on="down">
- </div>
- </div>
+    <div class="doublebox-v">
+        <div data-type="push" data-device="Rollo" 
+            data-icon="fa-chevron-up" data-background-icon="fa-square-o" 
+            data-set-on="up">
+        </div>
+        <div data-type="push" data-device="Rollo" 
+            data-icon="fa-chevron-down" data-background-icon="fa-square-o" 
+            data-set-on="down">
+        </div>
+    </div>
 </div>
 ```
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/square-push-v.png)
 
 **Example** for a push button to switch a lamp on for 5 minutes. The control shows a progress circle while countdown is running.
 The countdown time is auto detected via the on-for-timer command. A other value can be set with the parameter data-countdown
+
 ```html
 <div data-type="push" data-device="MyLamp" data-set-on="on-for-timer 300" ></div>
 ```
 ![](http://knowthelist.github.io/fhem-tablet-ui/push_on-for-timer.png)
 
-###Switch
+### Switch
 
 **Example** for a default switch widget to switch on/off to STATUS of MyDevice
+
 ```html
 <div data-type="switch" data-device="MyDevice"></div>
 ```
 
 The same switch but with inverted color
+
 ```html
 <div data-type="switch" data-device="MyDevice" class="invert"></div>
 ```
 
 **Example** for a switch to send 0/1 to a dummy device
+
 ```html
-<div data-type="switch" data-icon="fa-rss" data-device='isAutoHomeStatus'
- data-get-on="1" data-get-off="0" data-set-on="1" data-set-off="0"
- class="green small invert"></div>
+<div data-type="switch" data-icon="fa-rss" data-device="isAutoHomeStatus"
+    data-get-on="1" data-get-off="0" data-set-on="1" data-set-off="0"
+    class="green small invert"></div>
 ```
 
 **Example** for how to create a widget for MILIGHT via toggle button. Usage of RegEx pattern for state request:
 ```html
 <div data-type="switch"
- data-device="MILIGHT_Zone1_Wohnzimmer" 
- data-get-on="on.*"
- data-get-off="off"></div>
+    data-device="MILIGHT_Zone1_Wohnzimmer" 
+    data-get-on="on.*"
+    data-get-off="off"></div>
 ```
 ![](http://knowthelist.github.io/fhem-tablet-ui/button.png)
 
 **Example** for a button group to toggle between 4 different values for one device
+
 ```html
 <div>
- <div data-type="switch" data-device="dummy1" 
- data-get-off="!on" data-set-off="" data-icon="fa-home"
- data-get-on="Home"></div>
- <div>Home</div>
- <div data-type="switch" data-device="dummy1" 
- data-get-off="!on" data-set-off="" data-icon="fa-bed"
- data-get-on="Sleep"></div>
- <div>Sleep</div>
- <div data-type="switch" data-device="dummy1" 
- data-get-off="!on" data-set-off="" data-icon="fa-car"
- data-get-on="Away"></div>
- <div>Away</div>
- <div data-type="switch" data-device="dummy1" 
- data-get-off="!on" data-set-off="" data-icon="fa-suitcase"
- data-get-on="Holiday"></div>
- <div>Holiday</div>
+    <div data-type="switch" data-device="dummy1" 
+        data-get-off="!on" data-set-off="" data-icon="fa-home"
+        data-get-on="Home">
+    </div>
+    <div>Home</div>
+    <div data-type="switch" data-device="dummy1" 
+        data-get-off="!on" data-set-off="" data-icon="fa-bed"
+        data-get-on="Sleep">
+    </div>
+    <div>Sleep</div>
+    <div data-type="switch" data-device="dummy1" 
+        data-get-off="!on" data-set-off="" data-icon="fa-car"
+        data-get-on="Away">
+    </div>
+    <div>Away</div>
+    <div data-type="switch" data-device="dummy1" 
+        data-get-off="!on" data-set-off="" data-icon="fa-suitcase"
+        data-get-on="Holiday">
+    </div>
+    <div>Holiday</div>
 </div>
 ```
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/group.png)
 
 **Example** for a big homestatus button to toggle between two states
+
 ```html
 <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
- <header>HOMESTATUS</header>
- <div data-type="switch"
- data-device="dummy3"
- data-set-on="Anwesend"
- data-set-off="Abwesend"
- data-states='["Anwesend","Abwesend"]'
- data-icons='["fa-home", "fa-car"]'
- data-colors='["white", "white"]'
- data-background-colors='["green", "red"]'
- class="bigger top-space"></div>
+    <header>HOMESTATUS</header>
+    <div data-type="switch"
+        data-device="dummy3"
+        data-set-on="Anwesend"
+        data-set-off="Abwesend"
+        data-states='["Anwesend","Abwesend"]'
+        data-icons='["fa-home", "fa-car"]'
+        data-colors='["white", "white"]'
+        data-background-colors='["green", "red"]'
+        class="bigger top-space">
+    </div>
 </li>
 ```
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/homestatus.png)
 
-###Symbol
+### Symbol
 
 **Example** for a simple window symbol
+
 ```html
 <div data-type="symbol" data-device="SchlafzimmerFenster" class="narrow big"></div>
 ```
 
 **Example** for a tristate icon
+
 ```html
 <div data-type="symbol" data-device="dummy1" 
- data-states='["wert1","wert2","wert3"]' 
- data-icons='["fa-arrow-up","fa-user","fa-arrow-down"]' 
- data-colors='["SeaGreen","SlateBlue","IndianRed"]' 
- class="big">
+    data-states='["wert1","wert2","wert3"]' 
+    data-icons='["fa-arrow-up","fa-user","fa-arrow-down"]' 
+    data-colors='["SeaGreen","SlateBlue","IndianRed"]' 
+    class="big">
 </div>
 ```
 
 **Example** for a tristate icon with blink and spin animation
+
 ```html
 <div data-type="symbol" data-device="dummy1" 
- data-states='["Wert1","Wert2","Wert3"]'
- data-icons='["fa-exclamation-triangle fa-blink","fa-exclamation-circle","fa-cog fa-spin"]' 
- data-colors='["Crimson","GoldenRod","SeaGreen"]' 
- >
+    data-states='["Wert1","Wert2","Wert3"]'
+    data-icons='["fa-exclamation-triangle fa-blink","fa-exclamation-circle","fa-cog fa-spin"]' 
+    data-colors='["Crimson","GoldenRod","SeaGreen"]'>
 </div>
 ```
 
 **Example** for a battery level control with RegEx
+
 ```html
 <div data-type="symbol" data-device="WohnzimmerHeizung" data-get="batteryLevel"
- data-states='["3.[0-9]","2.[789]","2.[456]","2.[123]","((2.0)|([01].[0-9]))"]'
- data-icons='["fa-battery-4","fa-battery-3","fa-battery-2","fa-battery-1","fa-battery-0"]'
- data-colors='["#505050","#505050","#505050","#ad3333","#ad3333"]'>
+    data-states='["3.[0-9]","2.[789]","2.[456]","2.[123]","((2.0)|([01].[0-9]))"]'
+    data-icons='["fa-battery-4","fa-battery-3","fa-battery-2","fa-battery-1","fa-battery-0"]'
+    data-colors='["#505050","#505050","#505050","#ad3333","#ad3333"]'>
 </div>
 ``` 
 
 **Example** for a battery level control with greater-equal compare and 90° rotated symbols
+
 ```html 
 <div data-type="symbol" data-device="BadHeizung" data-get="batteryLevel"
-data-states='["0","2","2.4","2.7","3.0"]'
-data-icons='["oa-measure_battery_0 fa-rotate-90","oa-measure_battery_25 fa-rotate-90","oa-measure_battery_50 fa-rotate-90","oa-measure_battery_75 fa-rotate-90","oa-measure_battery_0 fa-rotate-90"]'
-data-colors='["#ad3333","#ad3333","#505050","#505050","#505050"]'>
+    data-states='["0","2","2.4","2.7","3.0"]'
+    data-icons='["oa-measure_battery_0 fa-rotate-90","oa-measure_battery_25 fa-rotate-90","oa-measure_battery_50 fa-rotate-90","oa-measure_battery_75 fa-rotate-90","oa-measure_battery_0 fa-rotate-90"]'
+    data-colors='["#ad3333","#ad3333","#505050","#505050","#505050"]'>
 </div>
 ```
 
 **Example** for a door symbol which shows a warning sign in case of an open state
+
 ```html 
 <div data-type="symbol" data-device="Eingangstuer" 
- data-states='["open","closed"]' 
- data-icons='["ftui-door warn","ftui-door"]' 
- data-colors='["#999","#555"]' >
+    data-states='["open","closed"]' 
+    data-icons='["ftui-door warn","ftui-door"]' 
+    data-colors='["#999","#555"]'>
 </div>
 ```
 
-###Weather
+### Weather
 
 **Example** for how to use a label to show a weather icon according reading literal
+
 ```html
 <div data-type="weather" 
- data-device="Weather" 
- data-get="fc0_weatherDay" 
- class="big">
+    data-device="Weather" 
+    data-get="fc0_weatherDay" 
+    class="big">
 </div>
 ```
+
 The weather literal could be delivered by a FHEM module like PROPLANTA, OPENWEATHER, Weather.
 
 Add 'big' or 'bigger' to CSS class to get a bigger weather icon.
 
 ![](http://knowthelist.github.io/fhem-tablet-ui/weather.png)
 
-###Slider
+### Slider
+
 **Example** for how to create a widget for a slider to set values from 10 to 90:
+
 ```html
 <div data-type="slider" 
- data-device='Dummy1' 
- data-min="10" 
- data-max="90">
+    data-device='Dummy1' 
+    data-min="10" 
+    data-max="90">
 </div>
 ```
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/slider.png)
 
-###Level
+### Level
+
 **Example** for how to create a widget for a double level control with additional labels
+
 ```html
 <div>
-<div data-type="level" data-device='Tablet' data-get='powerLevel'
-data-limits='["[12]*[0-9]","[3456][0-9]","([789][0-9]|100)"]'
-data-colors='["#dd3366","#ffcc00","#55aa44"]'
-class="horizontal left" >
-</div>
-<div data-type="label" data-device='Tablet'
- data-get='powerLevel'
- data-unit="%" class="top-space left"></div>
+    <div data-type="level" data-device="Tablet" data-get="powerLevel"
+        data-limits='["[12]*[0-9]","[3456][0-9]","([789][0-9]|100)"]'
+        data-colors='["#dd3366","#ffcc00","#55aa44"]'
+        class="horizontal left">
+    </div>
+    <div data-type="label" data-device="Tablet"
+        data-get="powerLevel"
+        data-unit="%" class="top-space left">
+    </div>
 </div>
 <div>
-<div data-type="level" data-device='dummy1'
-data-limits='["20","70","95"]'
-data-colors='["#dd3366","#ffcc00","#55aa44"]'
-class="horizontal left" >
-</div>
-<div data-type="label" data-device='dummy1' data-unit="%" 
- class="top-space left"></div>
+    <div data-type="level" data-device="dummy1"
+        data-limits='["20","70","95"]'
+        data-colors='["#dd3366","#ffcc00","#55aa44"]'
+        class="horizontal left">
+    </div>
+    <div data-type="label" data-device="dummy1" data-unit="%" 
+        class="top-space left">
+    </div>
 </div>
 ```
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/level_limits.png)
 
-###Progress
+### Progress
+
 **Example** for how to create a widget for a percent display
+
 ```html
-<div data-type="progress" data-device="dummy1" data-get='pct'></div>
+<div data-type="progress" data-device="dummy1" data-get="pct"></div>
 ```
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/progress.png)
 
-###Volume
+### Volume
+
 **Example** for how to create a widget for a HueDevice to set hue values:
+
 ```html
 <div data-type="volume" data-device='dummy1' 
-data-min='0' 
-data-max='65535' 
-data-tickstep='4' 
-data-get='hue' 
-data-set='hue' 
- class="small hue-tick" ></div>
+    data-min='0' 
+    data-max='65535' 
+    data-tickstep='4' 
+    data-get='hue' 
+    data-set='hue' 
+    class="small hue-tick">
+</div>
 ```
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/volume_hue.png)
 
 Following CSS classes are available to influence the look:
 hue-tick|hue-front|hue-back or dim-tick|dim-front|dim-back|rgb
 This classes can be combined (e.g. class="small hue-tick hue-front")
 
-###Dimmer
+### Dimmer
+
 **Example** for how to create a widget for a dimmer via toggle button incl. dimmer. Usage of RegEx pattern get all values for state on:
+
 ```html
 <div data-type="dimmer"
- data-device="MyDimmer1"
- data-get-on="[0-9]{1,3}|on"
- data-get-off="off">
+    data-device="MyDimmer1"
+    data-get-on="[0-9]{1,3}|on"
+    data-get-off="off">
 </div>
 ```
+
 To change the dim value: push the button and slide up or down 
+
 ![](http://knowthelist.github.io/fhem-tablet-ui/dimmer.png)
 
-
 **Example** for how to create a widget for a HUEDevice for on/off, percent and hue adjustment:
+
 ```html
-<div data-type="volume" data-device="HUEDevice1" data-min="0" data-max="65353" data-get="hue" data-set="hue" class="hue-tick mini wider" ></div>
+<div data-type="volume" data-device="HUEDevice1" data-min="0" data-max="65353" data-get="hue" data-set="hue" class="hue-tick mini wider"></div>
 <div>Color</div>
 <div data-type="dimmer" data-device="HUEDevice1" data-get-on="!off" data-get-off="off" data-set="pct"></div>
 <div>Brightness</div>
 ```
 
 **Example** for the same HUEDevice but with separat reading for dim
+
 ```html
 <div data-type="dimmer" data-device="HUEDevice1"
- data-get="onoff"
- data-get-on="1" data-get-off="0"
- data-set=""
- data-set-on="on" data-set-off="off"
- data-dim="pct">
+    data-get="onoff"
+    data-get-on="1" data-get-off="0"
+    data-set=""
+    data-set-on="on" data-set-off="off"
+    data-dim="pct">
 </div>
 ``` 
  
 ![](http://knowthelist.github.io/fhem-tablet-ui/hue_pct.png)
 
 **Example** for a FS20 Dimmer in simple mode (toggles between OFF value and the DIM value)
+
 ```html
 <div data-type="dimmer" data-device='myFS20Dimmer'
- data-set-on="dim$v%"
- data-set-off="dim0%"
- data-set-value="dim$v%"
- data-get-on="dim([1-9]\d?)?%"
- data-get-off="dim0%"></div>
+    data-set-on="dim$v%"
+    data-set-off="dim0%"
+    data-set-value="dim$v%"
+    data-get-on="dim([1-9]\d?)?%"
+    data-get-off="dim0%">
+</div>
 ```
 
-###Image
+### Image
+
 **Example** for how to add an image to the dashboard which its URL is delivered by a FHEM module like PROPLANTA:
+
 ```html
 <div data-type="image" data-device="Wetter1" 
- data-get="fc0_weatherDayIcon" 
- data-size="40px">
+    data-get="fc0_weatherDayIcon" 
+    data-size="40px">
 </div>
 ```
 
 **Example** for how to grab a live image every 5 secondes
 ```html
 <div data-type="image"
- data-size="95%"
- data-url="http://vusolo2/grab?format=jpg"
- data-refresh="5">
+    data-size="95%"
+    data-url="http://vusolo2/grab?format=jpg"
+    data-refresh="5">
 </div>
 ```
 
 **Example** for how to update a web image every 15 secondes
+
 ```html
 <div data-type="image"
- data-size="95%"
- data-url="http://lorempixel.com/400/200"
- data-refresh="15"
- class="nocache">
+    data-size="95%"
+    data-url="http://lorempixel.com/400/200"
+    data-refresh="15"
+    class="nocache">
 </div>
 ```
 
-###Homestatus
+### Homestatus
 **Example** for how to individualize the homestatus widget:
 ```html
-<div data-type="homestatus" data-device='hs_normal' class="small" ></div>
+<div data-type="homestatus" data-device="hs_normal" class="small"></div>
 
 <div data-type="homestatus" data-device='hs_extra'
- data-get-on='["home","asleep","absent","gone","gotosleep"]'
- data-alias='["Home","Night","Away","Holiday","Retire"]'
- data-icons='["fa-fire","fa-film","fa-plus","fa-car","fa-tint"]'
- data-version='residents'>
+    data-get-on='["home","asleep","absent","gone","gotosleep"]'
+    data-alias='["Home","Night","Away","Holiday","Retire"]'
+    data-icons='["fa-fire","fa-film","fa-plus","fa-car","fa-tint"]'
+    data-version="residents">
+</div>
 ```
 
-###Pagetab
-**Example** for a tab menu to switch smoothly between multiple pages. 
-Multiple pagetabs in a template file: menu.html
+### Pagetab
+
+**Example** for a tab menu to switch smoothly between multiple pages. Multiple pagetabs in a template file: menu.html
+
 ```html
 <html>
 <body>
- <header>MENU</header>
- <div>
- <div data-type="pagetab" data-url="index.html" data-icon="fa-home" ></div>
- <div data-type="pagetab" data-url="index_2.html" data-icon="fa-sliders"></div>
- <div data-type="pagetab" data-url="index_3.html" data-icon="fa-music" ></div>
- <div data-type="pagetab" data-url="index_4.html" data-icon="fa-hotel" ></div>
- <div data-type="pagetab" data-url="index_5.html" data-icon="fa-music" ></div>
- <div data-type="pagetab" data-url="index_6.html" data-icon="fa-database"></div>
- <div data-type="pagetab" data-url="index_7.html" data-icon="fa-fax" ></div>
- </div>
+    <header>MENU</header>
+    <div>
+        <div data-type="pagetab" data-url="index.html" data-icon="fa-home"></div>
+        <div data-type="pagetab" data-url="index_2.html" data-icon="fa-sliders"></div>
+        <div data-type="pagetab" data-url="index_3.html" data-icon="fa-music"></div>
+        <div data-type="pagetab" data-url="index_4.html" data-icon="fa-hotel"></div>
+        <div data-type="pagetab" data-url="index_5.html" data-icon="fa-music"></div>
+        <div data-type="pagetab" data-url="index_6.html" data-icon="fa-database"></div>
+        <div data-type="pagetab" data-url="index_7.html" data-icon="fa-fax"></div>
+    </div>
 </body>
 </html>
 ```
 
 **Example** for a tab menu item, which shows also the numeric value of a reading 
+
 ```html
 <div data-type="pagetab" data-device="MyFaxDevice"
-data-get-on='["0","1"]'
-data-icons='["fa-fax","fa-fax warn"]'
- data-url="index_fax.html"></div>
+    data-get-on='["0","1"]'
+    data-icons='["fa-fax","fa-fax warn"]'
+    data-url="index_fax.html"></div>
 </div>
 ```
 
 **Example** for a tab menu item, which also activate the new page in case of 'on' status
+
 ```html
 <div data-type="pagetab" data-device="myDoorBell"
-data-get-on='["0","(?:[1-9][0-9]*)","on"]'
-data-icons='["fa-fax","fa-fax warn","fa-fax warn activate"]'
- data-url="index_door.html"></div>
+    data-get-on='["0","(?:[1-9][0-9]*)","on"]'
+    data-icons='["fa-fax","fa-fax warn","fa-fax warn activate"]'
+    data-url="index_door.html">
 </div>
 ```
  
 ![](http://knowthelist.github.io/fhem-tablet-ui/menu.png)
 
+### Rotor
 
-###Rotor
 **Example** for a rotor widget, which switches between two days of weather forecast
+
 ```html
 <div data-type="rotor" class="fade">
- <ul>
- <li>
-<div data-type="label" class="darker">Heute</div>
-<div data-type="weather" data-device="AgroWeather" data-get="fc0_weatherDay" class="big"></div>
-<div data-type="label" data-device="AgroWeather" data-get="fc0_weatherDay" class=""></div>
- <div data-type="label" data-device="AgroWeather" data-get="fc0_tempMax" data-unit="" class="large"></div>
- </li>
- <li>
-<div data-type="label" class="darker">Morgen</div>
-<div data-type="weather" data-device="AgroWeather" data-get="fc1_weatherDay" class="big"></div>
-<div data-type="label" data-device="AgroWeather" data-get="fc1_weatherDay" class=""></div>
- <div data-type="label" data-device="AgroWeather" data-get="fc1_tempMax" data-unit="" class="large"></div>
- </li>
- </ul>
+    <ul>
+        <li>
+            <div data-type="label" class="darker">Heute</div>
+            <div data-type="weather" data-device="AgroWeather" data-get="fc0_weatherDay" class="big"></div>
+            <div data-type="label" data-device="AgroWeather" data-get="fc0_weatherDay" class=""></div>
+            <div data-type="label" data-device="AgroWeather" data-get="fc0_tempMax" data-unit="" class="large"></div>
+        </li>
+        <li>
+            <div data-type="label" class="darker">Morgen</div>
+            <div data-type="weather" data-device="AgroWeather" data-get="fc1_weatherDay" class="big"></div>
+            <div data-type="label" data-device="AgroWeather" data-get="fc1_weatherDay" class=""></div>
+            <div data-type="label" data-device="AgroWeather" data-get="fc1_tempMax" data-unit="" class="large"></div>
+        </li>
+    </ul>
 </div>
 ```
 
-###Swiper
+### Swiper
+
 Basic schema for a swiper widget, which switches between multiple DIVs
+
 ```html
 <div data-type="swiper" data-height="220px" data-width="400px" class="">
- <ul>
- <li><div class="">Page1</div></li>
- <li><div class="">Page2</div></li>
- <li><div class="">Page3</div></li>
- <li><div class="">Page4</div></li>
- <li><div class="">Page5</div></li>
- </ul>
+    <ul>
+        <li><div class="">Page1</div></li>
+        <li><div class="">Page2</div></li>
+        <li><div class="">Page3</div></li>
+        <li><div class="">Page4</div></li>
+        <li><div class="">Page5</div></li>
+    </ul>
 </div>
 ```
 
-###Simplechart
+### Simplechart
+
 **Example** for simplechart widget: two charts inline
+
 ```html
 <li data-row="4" data-col="4" data-sizex="8" data-sizey="3">
-<header>CHARTS</header>
- <div data-type="simplechart"
- data-device="WohnzimmerHeizung"
-data-logdevice="FileLog_WohnzimmerHeizung"
-data-columnspec="4:meas.*:1:int"
-data-minvalue="10"
-data-maxvalue="30"
- data-width="250px"
- data-height="120px"
-data-yticks="4"
-data-daysago="0"
- data-caption="Wohnzimmer" class="inline">
- </div>
- <div data-type="simplechart"
- data-device="KuecheHeizung"
-data-logdevice="FileLog_KuecheHeizung"
-data-columnspec="4:meas.*:1:int"
-data-minvalue="12"
-data-maxvalue="28"
- data-width="250px"
- data-height="120px"
-data-yticks="6"
-data-daysago="2"
- data-caption="Küche" class="inline">
- </div>
+    <header>CHARTS</header>
+    <div data-type="simplechart"
+        data-device="WohnzimmerHeizung"
+        data-logdevice="FileLog_WohnzimmerHeizung"
+        data-columnspec="4:meas.*:1:int"
+        data-minvalue="10"
+        data-maxvalue="30"
+        data-width="250px"
+        data-height="120px"
+        data-yticks="4"
+        data-daysago="0"
+        data-caption="Wohnzimmer" class="inline">
+    </div>
+    <div data-type="simplechart"
+        data-device="KuecheHeizung"
+        data-logdevice="FileLog_KuecheHeizung"
+        data-columnspec="4:meas.*:1:int"
+        data-minvalue="12"
+        data-maxvalue="28"
+        data-width="250px"
+        data-height="120px"
+        data-yticks="6"
+        data-daysago="2"
+        data-caption="Küche" class="inline">
+    </div>
 </li>
 ```
 
 ![](http://knowthelist.github.io/fhem-tablet-ui/simplechart-two.png)
 
 **Example** for simplechart widget: one chart fill the whole gridster element
+
 ```html
 <li data-row="4" data-col="4" data-sizex="8" data-sizey="3">
-<header>CHART</header>
-<div data-type="simplechart"
-data-device="WohnzimmerHeizung2"
-data-logdevice="FileLog_WohnzimmerHeizung2"
-data-logfile="WohnzimmerHeizung2.log"
-data-columnspec="4:temp:1:int"
-data-minvalue="10"
-data-maxvalue="30"
-data-yticks="4"
-data-daysago="0"
-data-caption="Wohnzimmer" class="fullsize">
-</div>
+    <header>CHART</header>
+    <div data-type="simplechart"
+        data-device="WohnzimmerHeizung2"
+        data-logdevice="FileLog_WohnzimmerHeizung2"
+        data-logfile="WohnzimmerHeizung2.log"
+        data-columnspec="4:temp:1:int"
+        data-minvalue="10"
+        data-maxvalue="30"
+        data-yticks="4"
+        data-daysago="0"
+        data-caption="Wohnzimmer" class="fullsize">
+    </div>
 </li>
 ```
 
 **Example** for chart widget
+
 ```html
 <li data-row="4" data-col="9" data-sizex="10" data-sizey="3">
- <header>CHART</header>
- <div class="normal"
- data-type="chart"
- data-device="WohnzimmerHeizung"
- data-logdevice='["FileLog_WohnzimmerHeizung","FileLog_WohnzimmerHeizung","FileLog_WohnzimmerHeizung"]'
- data-columnspec='["4:measured-temp","4:desired-temp","4:ValvePosition"]'
- data-style='["ftui l0fill","ftui l0dot","ftui l2dash"]'
- data-ptype='["lines","lines","lines"]'
- data-uaxis='["primary","primary","secondary"]'
- data-legend='["Measured", "Desired", "Valve"]'
- data-yunit="°C"
- data-ytext="Temperature"
- data-minvalue="auto"
- data-maxvalue="auto"
- data-yunit_sec="%"
- data-ytext_sec="Percentage"
- data-yticks="auto"
- data-minvalue_sec="0"
- data-maxvalue_sec="100"
- data-daysago_start="0"
- data-daysago_end="-1"
- data-crosshair="true"
- data-cursorgroup="1"
- data-scrollgroup="1"
- data-showlegend="true"
- data-xticks="auto">
- </div>
+    <header>CHART</header>
+    <div class="normal"
+        data-type="chart"
+        data-device="WohnzimmerHeizung"
+        data-logdevice='["FileLog_WohnzimmerHeizung","FileLog_WohnzimmerHeizung","FileLog_WohnzimmerHeizung"]'
+        data-columnspec='["4:measured-temp","4:desired-temp","4:ValvePosition"]'
+        data-style='["ftui l0fill","ftui l0dot","ftui l2dash"]'
+        data-ptype='["lines","lines","lines"]'
+        data-uaxis='["primary","primary","secondary"]'
+        data-legend='["Measured", "Desired", "Valve"]'
+        data-yunit="°C"
+        data-ytext="Temperature"
+        data-minvalue="auto"
+        data-maxvalue="auto"
+        data-yunit_sec="%"
+        data-ytext_sec="Percentage"
+        data-yticks="auto"
+        data-minvalue_sec="0"
+        data-maxvalue_sec="100"
+        data-daysago_start="0"
+        data-daysago_end="-1"
+        data-crosshair="true"
+        data-cursorgroup="1"
+        data-scrollgroup="1"
+        data-showlegend="true"
+        data-xticks="auto">
+    </div>
 </li>
 ```
 
 ![](http://knowthelist.github.io/fhem-tablet-ui/widget_chart_example.png)
 
-###Circle Menu
--------
+### Circle Menu
+
 Cover a lot of other button behind one single button 
 
 ```html
 <div class="col-1-2">
- <div data-type="circlemenu" class="">
- <ul>
- <li><div data-type="push" data-icon="fa-wrench"></div></li>
- <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level -6" data-icon="">-6</div></li>
- <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level -2" data-icon="">-2</div></li>
- <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level 0" data-icon="">0</div></li>
- <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level 3" data-icon="">2</div></li>
- <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level 9" data-icon="">9</div></li>
- <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level 12" data-icon="">12</div></li>
- </ul>
- </div>
- <div class="">Woofer</div>
+    <div data-type="circlemenu" class="">
+        <ul>
+            <li><div data-type="push" data-icon="fa-wrench"></div></li>
+            <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level -6" data-icon="">-6</div></li>
+            <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level -2" data-icon="">-2</div></li>
+            <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level 0" data-icon="">0</div></li>
+            <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level 3" data-icon="">2</div></li>
+            <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level 9" data-icon="">9</div></li>
+            <li><div data-type="push" data-device="AvReceiver" data-set-on="subwoofer-temporary-level 12" data-icon="">12</div></li>
+        </ul>
+    </div>
+    <div class="">Woofer</div>
 </div>
 ```
 
 ![](http://knowthelist.github.io/fhem-tablet-ui/circle_menu_open.png)
 
+### Playstream
 
-###Playstream
--------
 Create a simple button to play a webradio stream directly on the tablet
 
 ```html
@@ -2157,115 +2237,117 @@ Use a FHEM dummy device to start/stop stream and set volume
 
 ```html
 <div data-type="playstream" data-url="http://radioeins.de/stream" 
- data-device="dummy1" 
- data-get-on="play" data-get-off="stop"
- data-volume="volume">
+    data-device="dummy1" 
+    data-get-on="play" data-get-off="stop"
+    data-volume="volume">
 </div>
 ```
  
-###Select
--------
+### Select
+
 Create two comboboxes to select the inputs of a two zone AV receiver. List for Zone2 is fix, list for Zone1 will be received from FHEM.
 
 ```html
 <div class="wider">
- <div data-type="label" class="inline wider">Zone2</div>
- <div data-type="select" data-device="AvReceiverZ2" data-items='["Airplay","Webradio","BD/DVD","PHONO"]' data-get="input" data-set="input" class="w2x" ></div>
- <div></div>
- <div data-type="label" class="inline">Zone1</div>
- <div data-type="select" data-device="AvReceiver" data-list="inputs" data-get="input" data-set="input" class="w2x" ></div>
+    <div data-type="label" class="inline wider">Zone2</div>
+    <div data-type="select" data-device="AvReceiverZ2" data-items='["Airplay","Webradio","BD/DVD","PHONO"]' data-get="input" data-set="input" class="w2x"></div>
+    <div data-type="label" class="inline">Zone1</div>
+    <div data-type="select" data-device="AvReceiver" data-list="inputs" data-get="input" data-set="input" class="w2x"></div>
 </div>
 ```
 ![](http://knowthelist.github.io/fhem-tablet-ui/select_2x.png) 
 
-###Input
+### Input
 
 ```html
 <li data-row="1" data-col="4" data-sizex="2" data-sizey="2">
- <header>SELECT</header>
- <div data-type="select" data-items='["dummy1","dummy2","dummy3","dummy4"]' id="sendDev" class="notransmit w3x"></div>
- <div data-type="select" data-items='["STATE","warn1","warn2","webCmd","room"]' id="sendParam" class="notransmit w3x"></div>
- <div data-type="input" data-device="#sendDev" data-get="#sendParam" id="sendValue" data-value="127" class="notransmit w3x centered"></div>
- <div data-type="link" class="round centered"
- data-width="80" data-height="40"
- data-color="white"
- data-background-color="green"
- data-icon="fa-feed"
- data-device="#sendDev"
- data-set="#sendParam"
- data-value="#sendValue">
- OK
- </div>
+    <header>SELECT</header>
+    <div data-type="select" data-items='["dummy1","dummy2","dummy3","dummy4"]' id="sendDev" class="notransmit w3x"></div>
+    <div data-type="select" data-items='["STATE","warn1","warn2","webCmd","room"]' id="sendParam" class="notransmit w3x"></div>
+    <div data-type="input" data-device="#sendDev" data-get="#sendParam" id="sendValue" data-value="127" class="notransmit w3x centered"></div>
+    <div data-type="link" class="round centered"
+    data-width="80" data-height="40"
+    data-color="white"
+    data-background-color="green"
+    data-icon="fa-feed"
+    data-device="#sendDev"
+    data-set="#sendParam"
+    data-value="#sendValue">
+    </div>
 </li>
 ```
 
-###Dialog
--------
+### Dialog
+
 Basic structure for a popup:
+
 ```html
 <div data-type="popup" data-height="150px" data-width="250px">
- <div><!-- click object to open the popup --></div>
- <div class="dialog">
- <header>DIALOG</header>
- <div><!-- widget(s) inside the popup dialog --></div>
- </div>
+    <div><!-- click object to open the popup --></div>
+    <div class="dialog">
+        <header>DIALOG</header>
+        <div><!-- widget(s) inside the popup dialog --></div>
+    </div>
 </div>
 ```
-Create a Link in the UI which opens a dialog with sub widgets .
+
+Create a Link in the UI which opens a dialog with sub widgets.
+
 ```html
 <div data-type="popup" data-height="200px" data-width="400px">
-<div data-type="link" class="large thin">Show Temperatur</div>
- <div class="dialog">
- <header>DIALOG</header>
- <div class="top-space">
- <div class="inline">
- <div data-type="label" data-device="THSensorWZ" data-get="temperature" data-limits='[-73,19,23]' data-colors='["#6699FF","#aa6900","#bb6242"]' data-unit="&deg;C" class="bigger thin"></div>
- <div>Temperatur</div>
- </div>
- <div class="inline">
- <div data-type="label" data-device="THSensorWZ" data-fix="0" data-part="4" data-limits='[0,40,60]' data-colors='["#bb6242","#aa6900","#bb6242"]' data-unit="%" class="bigger thin"></div>
- <div>Luftfeuchte</div>
- </div>
- </div>
- </div>
+    <div data-type="link" class="large thin">Show Temperatur</div>
+    <div class="dialog">
+        <header>DIALOG</header>
+        <div class="top-space">
+            <div class="inline">
+                <div data-type="label" data-device="THSensorWZ" data-get="temperature" data-limits='[-73,19,23]' data-colors='["#6699FF","#aa6900","#bb6242"]' data-unit="&deg;C" class="bigger thin"></div>
+                <div>Temperatur</div>
+            </div>
+            <div class="inline">
+                <div data-type="label" data-device="THSensorWZ" data-fix="0" data-part="4" data-limits='[0,40,60]' data-colors='["#bb6242","#aa6900","#bb6242"]' data-unit="%" class="bigger thin"></div>
+                <div>Luftfeuchte</div>
+            </div>
+        </div>
+    </div>
 </div>
 ```
+
 Create a mini chart in the UI which opens a dialog with the full size of the chart.
 
 ```html
 <div data-type="popup" data-width="450px">
-<div data-type="simplechart"
- data-device="OutTemp"
- data-logdevice="FileLog_OutTemp"
- data-columnspec="4:temp"
- data-minvalue="-25"
- data-maxvalue="35"
- data-height="50"
- data-width="100">
-</div>
-<div class="dialog">
-<header>BIG-CHART</header>
-<div data-type="simplechart"
- data-device="OutTemp"
- data-logdevice="FileLog_OutTemp"
- data-columnspec="4:temp"
- data-minvalue="-25"
- data-maxvalue="35"
- data-yticks="5"
- data-height="150">
-</div>
-</div>
+    <div data-type="simplechart"
+        data-device="OutTemp"
+        data-logdevice="FileLog_OutTemp"
+        data-columnspec="4:temp"
+        data-minvalue="-25"
+        data-maxvalue="35"
+        data-height="50"
+        data-width="100">
+    </div>
+    <div class="dialog">
+        <header>BIG-CHART</header>
+        <div data-type="simplechart"
+            data-device="OutTemp"
+            data-logdevice="FileLog_OutTemp"
+            data-columnspec="4:temp"
+            data-minvalue="-25"
+            data-maxvalue="35"
+            data-yticks="5"
+            data-height="150">
+        </div>
+    </div>
 </div>
 ```
 
-###Datetimepicker
--------
+### Datetimepicker
+
 Create a Label in the UI which opens a datetime picker.
 
 ```html
 <div class="left" >
- <div data-type="label" class="inline thin" >Start:</div>
- <div data-type="datetimepicker" data-device="dummy1" class="inline large thin orange"></div>
+    <div data-type="label" class="inline thin">Start:</div>
+    <div data-type="datetimepicker" data-device="dummy1" class="inline large thin orange"></div>
 </div> 
 ```
 
@@ -2273,137 +2355,130 @@ Create a Label in the UI which opens a time picker.
 
 ```html
 <div class="cleft" >
- <div data-type="label" class="inline thin" >Bad:</div>
- <div data-type="datetimepicker" data-device="dummy1"
- data-datepicker="false" data-format="H:i"
- class="inline large thin orange"></div>
+    <div data-type="label" class="inline thin" >Bad:</div>
+    <div data-type="datetimepicker"
+        data-device="dummy1"
+        data-datepicker="false"
+        data-format="H:i"
+        class="inline large thin orange">
+    </div>
 </div>
 ```
 
 ![](http://knowthelist.github.io/fhem-tablet-ui/timepicker.png)
 
-###Range
--------
+### Range
 
 Example of range widgets to visualize max and min temperature value as a range bar. Temperatures below zero are shown in blue, values above 2 become red.
 
 ```html
 <div class="container">
- <div data-type="range" data-device="AgroWeather" data-low="fc0_tempMin" data-high="fc0_tempMax" data-max="5" data-min="-5" data-limit-low="0" data-limit-high="2" class="inline left-space"></div>
- <div data-type="range" data-device="AgroWeather" data-low="fc1_tempMin" data-high="fc1_tempMax" data-max="5" data-min="-5" data-limit-low="0" data-limit-high="2" class="inline left-space nolabels"></div>
- <div data-type="range" data-device="AgroWeather" data-low="fc2_tempMin" data-high="fc2_tempMax" data-max="5" data-min="-5" data-limit-low="0" data-limit-high="2" class="inline left-space nolabels"></div>
+    <div data-type="range" data-device="AgroWeather" data-low="fc0_tempMin" data-high="fc0_tempMax" data-max="5" data-min="-5" data-limit-low="0" data-limit-high="2" class="inline left-space"></div>
+    <div data-type="range" data-device="AgroWeather" data-low="fc1_tempMin" data-high="fc1_tempMax" data-max="5" data-min="-5" data-limit-low="0" data-limit-high="2" class="inline left-space nolabels"></div>
+    <div data-type="range" data-device="AgroWeather" data-low="fc2_tempMin" data-high="fc2_tempMax" data-max="5" data-min="-5" data-limit-low="0" data-limit-high="2" class="inline left-space nolabels"></div>
 </div>
 ```
 
 ![](http://knowthelist.github.io/fhem-tablet-ui/widget_range.png)
 
-###Link
--------
+### Link
 
 Example for a button-like link. Usable for a popup opener
 
 ```html
-<div data-type="link" class="round"
- data-color="grey"
- data-border-color="grey"
- data-icon="fa-server">Details</div>
+<div data-type="link"
+    data-color="grey"
+    data-border-color="grey"
+    data-icon="fa-server"
+    class="round">
+    Details
+</div>
 ```
-![](http://knowthelist.github.io/fhem-tablet-ui/link_small.png)
 
+![](http://knowthelist.github.io/fhem-tablet-ui/link_small.png)
 
 Example for a huge button-like link. Usable to trigger a fhem command
 
 ```html
-<div data-type="link" class="round"
- data-width="130" data-height="50"
- data-color="white"
- data-background-color="red"
- data-icon="fa-lock"
- data-fhem-cmd="set AllDoors locked">
- Lock Doors
+<div data-type="link"
+    data-width="130" data-height="50"
+    data-color="white"
+    data-background-color="red"
+    data-icon="fa-lock"
+    data-fhem-cmd="set AllDoors locked"
+    class="round">
+    Lock Doors
 </div>
 ```
 ![](http://knowthelist.github.io/fhem-tablet-ui/link_big.png)
 
-###Medialist
--------
+### Medialist
 
 Example for medialist usage
 
 ```html
 <div data-type="medialist"
- data-device="MPD1"
- data-get="playlistinfo"
- data-pos="Pos"
- data-set="play"
- class="autoscroll">
+    data-device="MPD1"
+    data-get="playlistinfo"
+    data-pos="Pos"
+    data-set="play"
+    class="autoscroll">
 </div>
 ```
 
-###Classchanger
--------
+### Classchanger
 
 Example for classchanger usage
 
 ```html
 <div data-type="classchanger"
- data-device="dummyDevice"
- data-get="myReading"
- data-get-on="yes"
- data-on-class="border-red"
- class="container bg-gray">
-
- <div data-type="symbol"
- data-device="myDummy1"></div>
-
- <div data-type="symbol"
- data-device="myDummy2"></div>
-
+    data-device="dummyDevice"
+    data-get="myReading"
+    data-get-on="yes"
+    data-on-class="border-red"
+    class="container bg-gray">
+    <div data-type="symbol" data-device="myDummy1"></div>
+    <div data-type="symbol" data-device="myDummy2"></div>
 </div>
 ```
 
-###Spinner
--------
+### Spinner
 
 Example for a value spinner. Per default the value is visualized as a level bar
 
 ```html
-<div data-type="spinner"
- data-device="dummy1">
-</div>
+<div data-type="spinner" data-device="dummy1"></div>
 ```
-![](http://knowthelist.github.io/fhem-tablet-ui/ftui_spinner1.png)
 
+![](http://knowthelist.github.io/fhem-tablet-ui/ftui_spinner1.png)
 
 Example for a special value spinner. The value is visualized as a dual color level bar
 
 ```html
 <div data-type="spinner"
- data-device="dummy2"
- data-min="10"
- data-max="30"
- data-gradient-color='["blue","red"]'>
+    data-device="dummy2"
+    data-min="10"
+    data-max="30"
+    data-gradient-color='["blue","red"]'>
 </div>
 ```
-![](http://knowthelist.github.io/fhem-tablet-ui/ftui_spinner2.png)
 
+![](http://knowthelist.github.io/fhem-tablet-ui/ftui_spinner2.png)
 
 Example for a special value spinner. The value is visualized as numeric text with °-unit
 
 ```html
 <div data-type="spinner"
- data-device="dummy3"
- data-min="10"
- data-max="30"
- data-unit="°"
- class="valueonly">
+    data-device="dummy3"
+    data-min="10"
+    data-max="30"
+    data-unit="°"
+    class="valueonly">
 </div>
 ```
 ![](http://knowthelist.github.io/fhem-tablet-ui/ftui_spinner3.png)
 
-###Theme
--------
-
+## Theme
 
  <link rel="stylesheet" href="css/fhem-darkgreen-ui.css" data-type="theme" data-device="dummy1" data-get="state" data-get-on="5" data-get-off="!on">
 
@@ -2411,8 +2486,8 @@ If you use themes, you have to avoid fix color definition. Use classes instead:
 
 <div class="fixedlabel" data-type="label" data-device="BadWandlicht" data-states='["on","off"]' data-classes='["active","gray"]'>Bad</div>
 
-Specials
--------
+### Specials
+
 **Example** to call a command directly to FHEM. This calls "set dummy1 off"
 ```html
 <div onclick="ftui.setFhemStatus('set dummy1 off');">All off!</div>
@@ -2424,19 +2499,24 @@ myUtils_HeizungUpDown("WZ.Thermostat_Climate","up")
  class="big">+</div>
 ```
 
-Templates
--------
-Include re-usable code. 
+## Templates
+
+Include re-usable code.
 
 Load a whole extern gridster element
+
 ```html
 <li data-row="1" data-col="1" data-sizex="1" data-sizey="4" data-template="menu.html"></li>
 ```
+
 Load a re-usable widget group
+
 ```html
 <div data-template="template_div.html"></div>
 ```
+
 Load a re-usable weather slide for swipe widget with parameters
+
 ```html
 <div data-type="swiper" data-height="250px" data-width="450px">
 <ul>
@@ -2468,14 +2548,14 @@ The weather template file contains this
 </html>
 ```
 
-###Donation
---------
+## Donation
+
 You can thank the creator of this versatile UI:
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PD4C2XM2VTD9A"><img src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" alt="[paypal]" /></a>
 
 Many many thanks to all donators!
 
-License
--------
+## License
+
 This project is licensed under [MIT](http://www.opensource.org/licenses/mit-license.php).
