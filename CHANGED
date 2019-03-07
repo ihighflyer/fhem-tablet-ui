@@ -1,3 +1,4 @@
 FHEM Tablet UI last changes:
- 2018-10-19
- - svgplot: fixed the src path
+ 2019-02-18
+ - slider: fixed a handle-position bug for bigger sizes
+ - link: added support for embedded widgets

@@ -131,8 +131,7 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 - **data-device** : FHEM device name (call FHEM's 'list' command to get all names)
 - **class** : CSS classes for look and format of the widget
 
-### Switch widget
-
+####Switch widget
 - **data-get** : name of the reading to get from FHEM (default 'STATE')
 - **data-set** : name of the reading to set from FHEM (default '')
 - **data-cmd** : name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set'
@@ -142,8 +141,9 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 - **data-warn-on** : value(s) that show the warn badge (default 'true|on|[1-9]{1}[0-9]*')
 - **data-warn-off** : value(s) that hide the warn badge (default 'false|off|0')
 - **data-warn-color** : forecolor for warn badge (default '#aaa')
-- **data-warn-background-color** : background color for warn badge (default '#aa2200')
+- **data-warn-background-color**  : background color for warn badge (default '#aa2200')
 - **data-warn-icon** : name of the font-awesome icon to be shown instead of the warn text. (default: '')
+- **data-warn-fixed** : number of digits after the decimal point (default: 0)
 - **data-hide** : name of the reading to hide/show the widget (default 'STATE')
 - **data-hide-on** : value for HIDE (default 'true|1|on')
 - **data-hide-off** : value for SHOW (default '!on')
@@ -799,20 +799,21 @@ See [examples](#range) of Range
 - **data-width** : (default 150)
 - **class** : roundIndicator,barIndicator,lineIndicator
 
-### Link widget
+####Link widget
 - **data-color** : rgb value or color name for the text and icon (default 'orange')
 - **data-background-color** : rgb value or color name for the back (default null)
 - **data-border-color** : rgb value or color name for the border (default null)
-- **data-icon-left** : name of the left icon (default null)
-- **data-icon-right** : name of the right icon (default null)
-- **data-width** : width of the link (default 'auto')
+- **data-icon-left** : name of the left icon   (default null)
+- **data-icon-right** : name of the right icon  (default null)
+- **data-width** : width of the link  (default 'auto')
 - **data-height** : height of the link (default 'auto')
 - **data-url** : URL as a adress to jump to (default '')
 - **data-get** : name of the reading where to get the url from (default null)
+- **data-lock** : name of the reading containing the boolean value for the lock (readonly) parameter (default <null>)
 - **data-url-xhr** : URL as a adress to call in background (default '')
 - **data-fhem-cmd** : a FHEM command to call (default '')
-- **data-text-align** : alignment of text ['left','center','right'] (default 'center')
-- **data-active-pattern** : RegEx to define active state. Match check will be done against current document location (default null)
+- **data-text-align** : alignment of text ['left','center','right']  (default 'center')
+- **data-active-pattern** : RegEx to define active state. Match check will be done against current document location  (default null)
 - **data-active-color** : rgb value or color name for the text and icon in case active-pattern is matching (default same as data-color)
 - **data-active-background-color** : rgb value or color name for the back in case active-pattern is matching (default same as data-background-color)
 - **data-active-border-color** : rgb value or color name for the border in case active-pattern is matching (default same as data-border-color)
@@ -2332,30 +2333,30 @@ Load a re-usable weather slide for swipe widget with parameters
 ```html
 <div data-type="swiper" data-height="250px" data-width="450px">
 <ul>
- <li data-template="templates/wetter.html" data-parameter='{"par01":"fc0_tempMax","par02":"fc0_weatherDay","par03":"fc0_tempMin","par04":"fc0_date"}'></li>
- <li data-template="templates/wetter.html" data-parameter='{"par01":"fc1_tempMax","par02":"fc1_weatherDay","par03":"fc1_tempMin","par04":"fc1_date"}'></li>
- <li data-template="templates/wetter.html" data-parameter='{"par01":"fc2_tempMax","par02":"fc2_weatherDay","par03":"fc2_tempMin","par04":"fc2_date"}'></li>
- <li data-template="templates/wetter.html" data-parameter='{"par01":"fc3_tempMax","par02":"fc3_weatherDay","par03":"fc3_tempMin","par04":"fc3_date"}'></li>
- </ul>
- </div>
+    <li data-template="templates/wetter.html" data-parameter='{"par01":"fc0_tempMax","par02":"fc0_weatherDay","par03":"fc0_tempMin","par04":"fc0_date"}'></li>
+    <li data-template="templates/wetter.html" data-parameter='{"par01":"fc1_tempMax","par02":"fc1_weatherDay","par03":"fc1_tempMin","par04":"fc1_date"}'></li>
+    <li data-template="templates/wetter.html" data-parameter='{"par01":"fc2_tempMax","par02":"fc2_weatherDay","par03":"fc2_tempMin","par04":"fc2_date"}'></li>
+    <li data-template="templates/wetter.html" data-parameter='{"par01":"fc3_tempMax","par02":"fc3_weatherDay","par03":"fc3_tempMin","par04":"fc3_date"}'></li>
+</ul>
+</div>
 ```
 
 The weather template file contains this
 ```html
 <html>
 <body>
- <div class="left">
- <div data-type="label" data-device="AgroWeather" data-get="par01" data-unit="°C&nbsp;" class="bottom gigantic inline verticalLine"></div>
- <div class="inline">
- <div data-type="label" data-device="AgroWeather" data-get="par02" class="large"></div>
- <div data-type="weather" data-device="AgroWeather" data-get="par02" class="bigplus thin"></div>
- min:&nbsp;<div data-type="label" data-device="AgroWeather" data-get="par03" data-unit="&deg;C" class="inline medium"></div>
- </div>
- </div><div class="row"></div>
- <div class="left">
- <div data-type="label" data-device="AgroWeather" data-get="par04" data-substitution="toDate().eeee()+','" class="left large darker"></div>
- <div data-type="label" data-device="AgroWeather" data-get="par04" data-substitution="toDate().ddmm()" class="left large darker"></div>
- </div>
+    <div class="left">
+       <div data-type="label" data-device="AgroWeather" data-get="par01" data-unit="°C&nbsp;" class="bottom gigantic inline verticalLine"></div>
+       <div class="inline">
+          <div data-type="label" data-device="AgroWeather" data-get="par02" class="large"></div>
+          <div data-type="weather" data-device="AgroWeather" data-get="par02" class="bigplus thin"></div>
+          min:&nbsp;<div data-type="label" data-device="AgroWeather" data-get="par03" data-unit="&deg;C" class="inline medium"></div>
+       </div>
+    </div><div class="row"></div>
+    <div class="left">
+        <div data-type="label" data-device="AgroWeather" data-get="par04" data-substitution="toDate().eeee()+','" class="left large darker"></div>
+        <div data-type="label" data-device="AgroWeather" data-get="par04" data-substitution="toDate().ddmm()" class="left large darker"></div>
+    </div>
 </body>
 </html>
 ```
@@ -2371,4 +2372,3 @@ Many many thanks to all donators!
 License
 -------
 This project is licensed under [MIT](http://www.opensource.org/licenses/mit-license.php).
- 
