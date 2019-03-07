@@ -20,7 +20,11 @@ All requirements are included in the lib folder.
 2. rename the index-example.html to index.html or create your own index.html
 3. Tadaaa! A new fhem ui in http://\<fhem-url\>:8083/fhem/tablet/index.html
 
-or just use ```update all https://raw.githubusercontent.com/knowthelist/fhem-tablet-ui/master/controls_fhemtabletui.txt``` on the FHEM commandline (or input field of FHEMWEB)
+or just use
+
+```update all https://raw.githubusercontent.com/knowthelist/fhem-tablet-ui/master/controls_fhemtabletui.txt```
+
+on the FHEM commandline (or input field of FHEMWEB)
 
 ## Demos
 
@@ -63,7 +67,7 @@ Change the widgets you have and want to see on the dashboard
 
 ## Widgets
 
-Currently there are more then 20 types of widgets in the base installation.
+Currently there are more than 20 types of widgets in the base installation.
 
 | Widget | Description |
 | ------ | ----------- |
@@ -87,8 +91,8 @@ Currently there are more then 20 types of widgets in the base installation.
 | **swiper** | touch slider for multiple widgets at one position |
 | **progress** | round symbolic display for percent values |
 | **simplechart** | simple XY line chart for one value (reads directly from fhem log file) |
-| **popup** | a popup dialog which open on click on another widget | 
-| **readingsgroup** | displaying a readingsgroup defined in fhem |
+| **popup** | a popup dialog which opens by clicking on another widget | 
+| **readingsgroup** | displays a readingsgroup defined in fhem |
 | **datetimepicker** | select a date and time value from calendar |
 | **eventmonitor**| for debugging - shows all events which normal widgets 'see' |
 | **chart** | multistyle chart for multiple values (reads directly from FHEM log file) |
@@ -104,11 +108,11 @@ Currently there are more then 20 types of widgets in the base installation.
 | **notify** | popup browser notifications for reading changes |
 | **theme** | plugin to actives css stylesheet themes |
 
-By default the ui gets/sets the fhem parameter 'STATE' (not 'state').
+By default the ui gets/sets the fhem internal 'STATE' (not the reading 'state').
 
 All widgets have individual parameter settings. Set following attributes according your needs.
 
-**Attributes with defaults are optional and does not have to be set.**
+**Attributes with defaults are optional.**
 
 ## General attribute meaning
 
@@ -153,7 +157,7 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 | **data-warn-off** | value(s) that hide the warn badge | false\|off\|0 |
 | **data-warn-color** | forecolor for warn badge | #aaa |
 | **data-warn-background-color** | background color for warn badge | #aa2200 |
-| **data-warn-icon** | name of the font-awesome icon to be shown instead of the warn text. | |
+| **data-warn-icon** | name of the font-awesome icon to be shown instead of the warn text | |
 | **data-warn-fixed** | number of digits after the decimal point | 0 |
 | **data-hide** | name of the reading to hide/show the widget | STATE |
 | **data-hide-on** | value for HIDE | true\|1\|on |
@@ -167,10 +171,10 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 | Attribute | Description | Default |
 | --------- | ----------- | ------- |
 | **data-get-on** | value for ON status to get or an array of states | true\|1\|on\|open\|ON |
-| **data-get-off** | value for OFF status to get. | false\|0\|off\|closed\|OFF |
-| **data-set-on** | value for ON status to set. (default: ) | value of data-get-on |
-| **data-set-off** | value for OFF status to set. (default: ) | value of data-get-off |
-| **data-icon** | name of the font-awesome icon. (default: ) | fa-lightbulb-o |
+| **data-get-off** | value for OFF status to get | false\|0\|off\|closed\|OFF |
+| **data-set-on** | value for ON status to set | value of data-get-on |
+| **data-set-off** | value for OFF status to set | value of data-get-off |
+| **data-icon** | name of the font-awesome icon | fa-lightbulb-o |
 | **data-background-icon** | name of the font-awesome icon for background | fa-circle |
 | **data-on-background-color** | color for ON state or DEVICE:READING for dynamic setting | #aa6900 |
 | **data-off-background-color** | color for OFF state or DEVICE:READING for dynamic setting | #505050 |
@@ -182,7 +186,7 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 | Attribute | Description | Default |
 | --------- | ----------- | ------- |
 | **data-states** | array of states | | 
-| **data-set-states** | array of states to set. | |
+| **data-set-states** | array of states to set | |
 | **data-icons** | array of icons related to the data-states array | | 
 | **data-background-icons** | array of background icons related to the data-states array | |
 | **data-colors** | array of colors related to the data-states array | |
@@ -205,26 +209,26 @@ See [examples](#switch) of Switch
 
 | Attribute | Description | Default |
 | --------- | ----------- | ------- |
-| **data-get** | name of the reading to get from FHEM (default 'STATE') | |
-| **data-warn** | name of the reading to be shown as a red warn overlay (default <null>) | |
-| **data-warn-on** | value(s) that show the warn badge (default 'true|on|[1-9]{1}[0-9]*') | |
-| **data-warn-off** | value(s) that hide the warn badge (default 'false|off|0') | |
-| **data-warn-color** | forecolor for warn badge (default '#aaa') | |
-| **data-warn-background-color** | background color for warn badge (default '#aa2200') | |
-| **data-hide** | name of the reading to hide/show the widget (default 'STATE') | |
-| **data-hide-on** | value for HIDE (default 'true|1|on') | |
-| **data-hide-off** | value for SHOW (default '!on') | |
+| **data-get** | name of the reading to get from FHEM | STATE |
+| **data-warn** | name of the reading to be shown as a red warn overlay | <null> |
+| **data-warn-on** | value(s) that show the warn badge | true\|on\|[1-9]{1}[0-9]* |
+| **data-warn-off** | value(s) that hide the warn badge | false\|off\|0 |
+| **data-warn-color** | forecolor for warn badge | #aaa |
+| **data-warn-background-color** | background color for warn badge | #aa2200 |
+| **data-hide** | name of the reading to hide/show the widget | STATE |
+| **data-hide-on** | value for HIDE | true\|1\|on |
+| **data-hide-off** | value for SHOW | !on |
 | **data-hideparents** | jquery selector to hide element's parents too | |
-| **data-lock** | name of the reading containing a boolean value for the lock (readonly) parameter (default <null>) | |
-| **data-reachable** | name of the reading containing a integer value to indicate whether the device is reachable or not (default <null>) | |
+| **data-lock** | name of the reading containing a boolean value for the lock (readonly) parameter | <null> |
+| **data-reachable** | name of the reading containing an integer value to indicate whether the device is reachable or not | <null> |
 
 #### Dual State Notation
 
 | Attribute | Description | Default |
 | --------- | ----------- | ------- |
 | **data-get-on** | value for ON status to get or an array of states | true\|1\|on\|open\|ON |
-| **data-get-off** | value for OFF status to get. | false\|0\|off\|closed\|OFF |
-| **data-icon** | name of the font-awesome icon. | ftui-window |
+| **data-get-off** | value for OFF status to get | false\|0\|off\|closed\|OFF |
+| **data-icon** | name of the font-awesome icon | ftui-window |
 | **data-background-icon** | name of the font-awesome icon for background | |
 | **data-on-background-color** | fix color attribute for ON state or DEVICE:READING for dynamic setting | #aa6900 |
 | **data-off-background-color** | fix color attribute for OFF state or DEVICE:READING for dynamic setting | #505050 |
@@ -419,53 +423,55 @@ data-device, data-get can be references (jQuery seletor) to select-widgets to ch
 
 all parameters from knob widget plus following additional parameters
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading containing the status value (default 'desired-temp') |
-| **data-temp** | name of the reading for measured temperature of thermostates (default 'measured-temp') |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default 'desired-temp') |
-| **data-valve** | name of the reading for valve position of thermostates |
-| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value (default '-1': all of the input) |
-| **data-mode** | name of the reading for mode of thermostates |
-| **data-min** | minimal value to set (default 10) |
-| **data-max** | maximal value to set (default 30) |
-| **data-mincolor** | Color of min temp (default '#4477ff'); |
-| **data-maxcolor** | Color of max temp (default '#ff0000'); |
-| **data-actcolor** | Color of current temp text (default '#999'); |
-| **data-nomcolor** | Color of value (default '#ffffff'); |
-| **data-step** | step size for value adjustment e.g. 0.5 (default 1) |
-| **data-off** | value to send to get the thermostat switch off (for this, dial the knob to then minimum value) |
-| **data-boost** | value to send to force boost mode (for this, dial the knob to then maximum value) |
-| **data-height** | vertical size of the widget (default 100) |
-| **data-width** | horizontal size of the widget (default 100) |
-| **data-touch-height** | vertical size of the widget during changes (default: the normal size - 100) |
-| **data-touch-width** | horizontal size of the widget during changes (default the normal size - 100) |
-| **data-touch-position** | position of the value during moving on touch devices (default 'left') |
-| **class** | mini, small, big, bigger, readonly |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading containing the status value | desired-temp |
+| **data-temp** | name of the reading for measured temperature of thermostates | measured-temp |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | desired-temp |
+| **data-valve** | name of the reading for valve position of thermostates | |
+| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value | -1 (all of the input) |
+| **data-mode** | name of the reading for mode of thermostates | |
+| **data-min** | minimal value to set | 10 |
+| **data-max** | maximal value to set | 30 |
+| **data-mincolor** | Color of min temp | #4477ff |
+| **data-maxcolor** | Color of max temp | #ff0000 |
+| **data-actcolor** | Color of current temp text | #999 |
+| **data-nomcolor** | Color of value | #fff |
+| **data-step** | step size for value adjustment e.g. 0.5 | 1 |
+| **data-off** | value to send to get the thermostat switch off (for this, dial the knob to then minimum value) | |
+| **data-boost** | value to send to force boost mode (for this, dial the knob to then maximum value) | |
+| **data-height** | vertical size of the widget | 100 |
+| **data-width** | horizontal size of the widget (default 100) | 100 |
+| **data-touch-height** | vertical size of the widget during changes | 100 |
+| **data-touch-width** | horizontal size of the widget during changes | 100 |
+| **data-touch-position** | position of the value during moving on touch devices | left |
+| **class** | mini, small, big, bigger, readonly | |
 
-// special for MAX! WandThermostat
+**special for MAX! WandThermostat**
+
 date-mode: if the value, retrieved from this reading equals 'auto' then such a command is created "set wz_WandThermostat desiredTemperature **auto** <value>".
+
 Other values creates something like this "set wz_WandThermostat desiredTemperature <value>"
 
 ### Volume widget
 
 all parameters from knob widget plus following additional parameters
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading to get from FHEM (default 'STATE') |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
-| **data-cmd** | name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value (default '-1': all of the input) |
-| **data-set-value** | Format of the value to send to FHEM (default '$v': the value only) |
-| **data-min** | minimal value to set (default 0) |
-| **data-max** | maximal value to set (default 70) |
-| **data-bgcolor** | Color of background (default '#505050'); |
-| **data-fgcolor** | Color of ticks (default '#666'); |
-| **data-nomcolor** | Color of value (default '#ffffff'); |
-| **data-tickstep** | distance between ticks (default 4|20) |
-| **data-unit** | add a unit after the desired value. |
-| **class** | mini, small, big, bigger, hue-tick, hue-front, hue-back, dim-tick ,dim-front, dim-back, readonly |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading to get from FHEM | STATE |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-cmd** | name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) | set |
+| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value | -1 (all of the input) |
+| **data-set-value** | Format of the value to send to FHEM | $v (the value only) |
+| **data-min** | minimal value to set | 0 |
+| **data-max** | maximal value to set | 70|
+| **data-bgcolor** | Color of background | #505050 |
+| **data-fgcolor** | Color of ticks | #666 |
+| **data-nomcolor** | Color of value | #fff |
+| **data-tickstep** | distance between ticks (default ) | 4|20 |
+| **data-unit** | add a unit after the desired value | |
+| **class** | mini, small, big, bigger, hue-tick, hue-front, hue-back, dim-tick ,dim-front, dim-back, readonly | |
 
 - class hue-tick: draw ticks in color range
 - class hue-front: draw handle in color range
@@ -478,21 +484,21 @@ all parameters from knob widget plus following additional parameters
 
 all parameters from knob widget plus following additional parameters
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading to get from FHEM (default 'STATE') |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
-| **data-get-on** | array of states using for get (default ['1','2','3','4']) |
-| **data-set-on** | array of states using for set. (default: value of data-get-on) |
-| **data-alias** | array of fix names to show only in the UI as an alias to the real states |
-| **data-icons** | array of icons related to the data-get-on array |
-| **data-bgcolor** | Color of background (default '#505050'); |
-| **data-fgcolor** | Color of ticks (default '#666'); |
-| **data-nomcolor** | Color of value (default '#ffffff'); |
-| **data-mincolor** | Color of background icons (default '#4477ff'); |
-| **data-maxcolor** | Color of the active icon (default '#ff0000'); |
-| **data-version** | name of the status model e.g. 'residents','roommate','guest' (default NULL) |
-| **class** | small, readonly |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading to get from FHEM | STATE |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-get-on** | array of states using for get | ['1','2','3','4'] |
+| **data-set-on** | array of states using for set | value of data-get-on |
+| **data-alias** | array of fix names to show only in the UI as an alias to the real states | |
+| **data-icons** | array of icons related to the data-get-on array | |
+| **data-bgcolor** | Color of background (default ''); | #505050 |
+| **data-fgcolor** | Color of ticks | #666 |
+| **data-nomcolor** | Color of value | #fff |
+| **data-mincolor** | Color of background icons | #4477ff |
+| **data-maxcolor** | Color of the active icon | #ff0000 |
+| **data-version** | name of the status model e.g. 'residents','roommate','guest' | <null> |
+| **class** | small, readonly | |
 
 The default version has 4 states: '1','2','3','4' 
 The default aliases are 'Home','Night','Away','Holiday';
@@ -501,25 +507,25 @@ They have these aliases 'Home','Night','Away','Holiday','Retire'
 
 ### Slider widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading to get from FHEM (default 'STATE') |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
-| **data-cmd** | name of the command (**\<command\>** \<device\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-min** | minimal value to set (default 0) |
-| **data-max** | maximal value to set (default 100) |
-| **data-step** | step value (default 1) |
-| **data-on** | value or RegEx where the slider moves to max (default 'on') | 
-| **data-off** | value or RegEx where the slider moves to min (default 'off') |
-| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value (default '-1': all of the input) |
-| **data-set-value** | Format of the value to send to FHEM (default '$v': the value only) |
-| **data-width** | width for horizontal sliders (default '120px', for mini '60px') |
-| **data-height** | height for vertical sliders (default '120px', for mini '60px') |
-| **data-color** | color for quantity range (default '#aa6900') |
-| **data-background-color** | color for range bar (default '#404040') |
-| **data-handle-diameter** | size for the handle (default 20) |
-| **data-touch-diameter** | size for the handle on movement (default the normal size) |
-| **class** | mini, horizontal, negated, value, textvalue, FS20, tap, big, bigger, large |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading to get from FHEM | STATE |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-cmd** | name of the command (**\<command\>** \<device\> \<value\>) (e.g. setstate, set, setreading, trigger) | set |
+| **data-min** | minimal value to set | 0 |
+| **data-max** | maximal value to set | 100 |
+| **data-step** | step value | 1 |
+| **data-on** | value or RegEx where the slider moves to max | on | 
+| **data-off** | value or RegEx where the slider moves to min | off |
+| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value | -1 (all of the input) |
+| **data-set-value** | Format of the value to send to FHEM | $v (the value only) |
+| **data-width** | width for horizontal sliders | 120px', for mini 60px |
+| **data-height** | height for vertical sliders | 120px', for mini 60px |
+| **data-color** | color for quantity range | #aa6900 |
+| **data-background-color** | color for range bar | #404040 |
+| **data-handle-diameter** | size for the handle | 20 |
+| **data-touch-diameter** | size for the handle on movement (default the normal size) | |
+| **class** | mini, horizontal, negated, value, textvalue, FS20, tap, big, bigger, large | |
 
 The slider supports tap to target only if the CSS class 'tap' is added.
 $v is a placeholder for the numeric value, it will be replaced be the real value at runtime.
@@ -528,49 +534,49 @@ class 'value' enables a text element which shows the value
 
 ### Level widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading to get from FHEM (default 'STATE') |
-| **data-min** | minimal value to set (default 0) |
-| **data-max** | maximal value to set or name of the reading which helds the max value (default 100) |
-| **data-on** | value where the slider moves to max (default 'on') |
-| **data-off** | value where the slider moves to min (default 'off') |
-| **data-part** | part number of the space separated value to show or an RegEx |
-| **data-colors** | a array of color values to affect the colour of the label according to the limit value | 
-| **data-limits** | a array of numeric or RegEx values to affect the colour of the label |
-| **class** | mini, horizontal,big,bigger,large |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading to get from FHEM | STATE |
+| **data-min** | minimal value to set | 0 |
+| **data-max** | maximal value to set or name of the reading which helds the max value | 100 |
+| **data-on** | value where the slider moves to max | on |
+| **data-off** | value where the slider moves to min | off |
+| **data-part** | part number of the space separated value to show or an RegEx | |
+| **data-colors** | a array of color values to affect the colour of the label according to the limit value | | 
+| **data-limits** | a array of numeric or RegEx values to affect the colour of the label | |
+| **class** | mini, horizontal,big,bigger,large | |
 
 ### Progress widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the reading to get from FHEM (default 'STATE') |
-| **data-max** | maximal value to set or name of the reading which helds the max value (default 100) |
-| **data-progress-width** | width of the circle line in percent (default 15) |
-| **data-unit** | add a unit after the center value. |
-| **class** | novalue, percent |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading to get from FHEM | STATE |
+| **data-max** | maximal value to set or name of the reading which helds the max value | 100 |
+| **data-progress-width** | width of the circle line in percent | 15 |
+| **data-unit** | add a unit after the center value. | |
+| **class** | novalue, percent | |
 
 ### Dimmer widget
 
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | name of the parameter that contains the status value (default 'STATE') |
-| **data-get-on** | value for ON status to get. (default 'on') |
-| **data-get-off** | value for OFF status to get. (default 'off') |
-| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value (default '-1': all of the input) |
-| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) (default '') |
-| **data-set-on** | string for ON status to set. (default: value of data-get-on) |
-| **data-set-off** | string for OFF status to set. (default: value of data-get-off) |
-| **data-set-value** | Format of the value to send to FHEM (default '$v': the value only) |
-| **data-cmd** | name of the command (**\<command\>** \<device\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-cmd-value** | name of the command for value changing via slider (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setreading) default: 'set' |
-| **data-dim** | name of the reading responsible for DIM (\<command\> \<device\> **\<reading\>** \<value\>) (default: '') |
-| **data-icon** | name of the font-awesome icon. (default: fa-lightbulb-o) |
-| **data-max** | numeric value for the maximal value to tune (default '100') |
-| **data-min** | numeric value for the minimal value to tune (default '0') |
-| **data-step** | numeric value for each increase/descrease (default '1') |
-| **data-lock** | name of the reading containing the boolean value for the lock (readonly) parameter (default <null>) |
-| **class** | FS20 |
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the parameter that contains the status value | STATE |
+| **data-get-on** | value for ON status to get | on |
+| **data-get-off** | value for OFF status to get | off |
+| **data-get-value** | RegEx to retrieve the value or part number of the space separated input to get the value | -1 (all of the input) |
+| **data-set** | name of the reading to set on FHEM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-set-on** | string for ON status to set | value of data-get-on |
+| **data-set-off** | string for OFF status to set | value of data-get-off |
+| **data-set-value** | Format of the value to send to FHEM | $v (the value only) |
+| **data-cmd** | name of the command (**\<command\>** \<device\> \<value\>) (e.g. setstate, set, setreading, trigger) | set |
+| **data-cmd-value** | name of the command for value changing via slider (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setreading) | set |
+| **data-dim** | name of the reading responsible for DIM (\<command\> \<device\> **\<reading\>** \<value\>) | |
+| **data-icon** | name of the font-awesome icon. (default: ) | fa-lightbulb-o |
+| **data-max** | numeric value for the maximal value to tune | 100 |
+| **data-min** | numeric value for the minimal value to tune | 0 |
+| **data-step** | numeric value for each increase/descrease | 1 |
+| **data-lock** | name of the reading containing the boolean value for the lock (readonly) parameter | <null> |
+| **class** | FS20 | |
 
 To change the dim value: push the button and slide up or down.
 
