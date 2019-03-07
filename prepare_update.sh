@@ -15,9 +15,3 @@ done
 #echo "FHEM Tablet UI last change:" > CHANGED
 #echo $(date +"%Y-%m-%d") >> CHANGED
 #echo " - $(git log -1 --pretty=%B)" >> CHANGED
-
-
-
-
-
-
