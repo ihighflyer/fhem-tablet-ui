@@ -115,22 +115,6 @@ All widgets have individual parameter settings. Set following attributes accordi
 A general command to FHEM looks like this ```<command> <device> <reading> <value>``` (e.g. 
 ```set MyLamp dim 75```)
 
-### Receive data
-
-| Attribute | Description |
-| --------- | ----------- |
-| **data-get** | reading name |
-| **data-get-on** | value for ON |
-| **data-get-off** | value for OFF |
-
-### Send data
-
-| Attribute | Description |
-| --------- | ----------- |
-| **data-set** | veading name |
-| **data-set-on** | value for ON |
-| **data-set-off** | value for OFF |
-
 ### All widgets
 
 | Attribute | Description |
@@ -139,28 +123,44 @@ A general command to FHEM looks like this ```<command> <device> <reading> <value
 | **data-device** | FHEM device name (call FHEM's 'list' command to get all names) |
 | **class** | CSS classes for look and format of the widget |
 
-### Switch widget
+#### Receive data
 
 | Attribute | Description |
 | --------- | ----------- |
-| **data-get** | name of the reading to get from FHEM (default 'STATE') |
-| **data-set** | name of the reading to set from FHEM (default '') |
-| **data-cmd** | name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) default: 'set' |
-| **data-doubleclick** | timeout to wait for x millisecondes click or touch. '0' disables the doubleclick feature. (default '0') |
-| **data-lock** | name of the reading containing a boolean value for the lock (readonly) parameter (default <null>) |
-| **data-warn** | name of the reading to be shown as a red warn overlay (default <null>) |
-| **data-warn-on** | value(s) that show the warn badge (default 'true|on|[1-9]{1}[0-9]*') |
-| **data-warn-off** | value(s) that hide the warn badge (default 'false|off|0') |
-| **data-warn-color** | forecolor for warn badge (default '#aaa') |
-| **data-warn-background-color** | background color for warn badge (default '#aa2200') |
-| **data-warn-icon** | name of the font-awesome icon to be shown instead of the warn text. (default: '') |
-| **data-warn-fixed** | number of digits after the decimal point (default: 0) |
-| **data-hide** | name of the reading to hide/show the widget (default 'STATE') |
-| **data-hide-on** | value for HIDE (default 'true|1|on') |
-| **data-hide-off** | value for SHOW (default '!on') |
-| **data-hideparents** | jquery selector to hide element's parents too |
-| **data-reachable** | name of the reading containing a integer value to indicate whether the device is reachable or not (default <null>) |
-| **data-timeout** | millisecondes until the switch falls back into the initial position (default: 0 [disabled]) |
+| **data-get** | reading name |
+| **data-get-on** | value for ON |
+| **data-get-off** | value for OFF |
+
+#### Send data
+
+| Attribute | Description |
+| --------- | ----------- |
+| **data-set** | veading name |
+| **data-set-on** | value for ON |
+| **data-set-off** | value for OFF |
+
+### Switch widget
+
+| Attribute | Description | Default |
+| --------- | ----------- | ------- |
+| **data-get** | name of the reading to get from FHEM | STATE |
+| **data-set** | name of the reading to set from FHEM | |
+| **data-cmd** | name of the command (**\<command\>** \<device\> \<reading\> \<value\>) (e.g. setstate, set, setreading, trigger) | set |
+| **data-doubleclick** | timeout to wait for x millisecondes click or touch. '0' disables the doubleclick feature. | 0 |
+| **data-lock** | name of the reading containing a boolean value for the lock (readonly) parameter | <null> |
+| **data-warn** | name of the reading to be shown as a red warn overlay (default ) | <null> |
+| **data-warn-on** | value(s) that show the warn badge | true\|on\|[1-9]{1}[0-9]* |
+| **data-warn-off** | value(s) that hide the warn badge | false\|off\|0 |
+| **data-warn-color** | forecolor for warn badge | #aaa |
+| **data-warn-background-color** | background color for warn badge | #aa2200 |
+| **data-warn-icon** | name of the font-awesome icon to be shown instead of the warn text. | |
+| **data-warn-fixed** | number of digits after the decimal point | 0 |
+| **data-hide** | name of the reading to hide/show the widget | STATE |
+| **data-hide-on** | value for HIDE | true\|1\|on |
+| **data-hide-off** | value for SHOW | on |
+| **data-hideparents** | jquery selector to hide element's parents too | |
+| **data-reachable** | name of the reading containing a integer value to indicate whether the device is reachable or not | <null> |
+| **data-timeout** | millisecondes until the switch falls back into the initial position | 0 |
 
 #### Dual state notation
 
