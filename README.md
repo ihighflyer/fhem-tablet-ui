@@ -65,42 +65,44 @@ Change the widgets you have and want to see on the dashboard
 
 Currently there are more then 20 types of widgets in the base installation.
 
-- **thermostat** : dial for heater thermostates to set desired value and show current value
-- **switch** : Toggle any command (e.g. on / off)
-- **label** : show state as text (colourable)
-- **symbol** : show state as an icon (e.g. window open) 
-- **push** : send one single command (e.g. up / down)
-- **volume** : dial to set a single value (e.g. 0-60)
-- **homestatus** : selector for 4 states (1 = home, 2 = night, 3 = away, 4 = holiday) 
-- **dimmer** : toogle button with a setter for on value
-- **slider** : vertical/horizontal slider to select between min/max value
-- **image** : insert an image, the URL is given by a reading
-- **weather** : insert an icon or image, represending a weather literal
-- **circlemenu** : Cover multiple widgets behind a single widget
-- **select** : Combobox to provide a list for selection
-- **pagetab** : Element to smoothly exchange the whole page with another page
-- **pagebutton** : Simple element to jump to another page and is shown as ON on destination Page
-- **level** : vertical/horizontal bar to show values between min/max value
-- **rotor** : slider to switch automatically between multiple widgets at one position
-- **swiper** : touch slider for multiple widgets at one position
-- **progress** : round symbolic display for percent values
-- **simplechart** : simple XY line chart for one value (reads directly from fhem log file)
-- **popup** : a popup dialog which open on click on another widget 
-- **readingsgroup** : displaying a readingsgroup defined in fhem
-- **datetimepicker** : select a date and time value from calendar
-- **eventmonitor**: for debugging - shows all events which normal widgets 'see'
-- **chart** : multistyle chart for multiple values (reads directly from FHEM log file)
-- **highchart** : multistyle chart for multiple values
-- **checkbox** : Toggle any command to FHEM (e.g. on / off)
-- **range** : vertical bar graph to show a values range between min/max value and high/low limits with different colors
-- **colorwheel** : select a color from a wheel
-- **link** : link or button link element
-- **spinner** : is a control element to adjust a value by clicking on the up or down icon
-- **departure** : a pulic transport departure schedule widget
-- **slideout** : a slide out menu plugin, usable for mobile phone pages.
-- **medialist** : a list of media elements e.g. songs in a playlist
-- **notify** : popup browser notifications for reading changes
-- **theme** : plugin to actives css stylesheet themes
+| Attribute | description |
+| --------- | ----------- |
+| **thermostat** | dial for heater thermostates to set desired value and show current value |
+| **switch** | Toggle any command (e.g. on / off) |
+| **label** | show state as text (colourable) |
+| **symbol** | show state as an icon (e.g. window open) | 
+| **push** | send one single command (e.g. up / down) |
+| **volume** | dial to set a single value (e.g. 0-60) |
+| **homestatus** | selector for 4 states (1 = home, 2 = night, 3 = away, 4 = holiday) | 
+| **dimmer** | toogle button with a setter for on value |
+| **slider** | vertical/horizontal slider to select between min/max value |
+| **image** | insert an image, the URL is given by a reading |
+| **weather** | insert an icon or image, represending a weather literal |
+| **circlemenu** | Cover multiple widgets behind a single widget |
+| **select** | Combobox to provide a list for selection |
+| **pagetab** | Element to smoothly exchange the whole page with another page |
+| **pagebutton** | Simple element to jump to another page and is shown as ON on destination Page |
+| **level** | vertical/horizontal bar to show values between min/max value |
+| **rotor** | slider to switch automatically between multiple widgets at one position |
+| **swiper** | touch slider for multiple widgets at one position |
+| **progress** | round symbolic display for percent values |
+| **simplechart** | simple XY line chart for one value (reads directly from fhem log file) |
+| **popup** | a popup dialog which open on click on another widget | 
+| **readingsgroup** | displaying a readingsgroup defined in fhem |
+| **datetimepicker** | select a date and time value from calendar |
+| **eventmonitor**| for debugging - shows all events which normal widgets 'see' |
+| **chart** | multistyle chart for multiple values (reads directly from FHEM log file) |
+| **highchart** | multistyle chart for multiple values |
+| **checkbox** | Toggle any command to FHEM (e.g. on / off) |
+| **range** | vertical bar graph to show a values range between min/max value and high/low limits with different colors |
+| **colorwheel** | select a color from a wheel |
+| **link** | link or button link element |
+| **spinner** | is a control element to adjust a value by clicking on the up or down icon |
+| **departure** | a pulic transport departure schedule widget |
+| **slideout** | a slide out menu plugin, usable for mobile phone pages. |
+| **medialist** | a list of media elements e.g. songs in a playlist |
+| **notify** | popup browser notifications for reading changes |
+| **theme** | plugin to actives css stylesheet themes |
 
 By default the ui gets/sets the fhem parameter 'STATE' (not 'state').
 
